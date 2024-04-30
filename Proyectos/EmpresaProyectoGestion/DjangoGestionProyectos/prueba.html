@@ -6,6 +6,174 @@
     <title>Deustronic Components S.L</title>
 </head>
 <body>
-    
+    <h1>Gestión de Proyectos - Deustotil Tech S.L.</h1>
+    <nav>
+        <!--DEJO ESTO POR SI LUEGO PONEMOS OTRAS PAGINAS PARA NAVEGAR ENTRE ELLAS-->
+    </nav>
+</header>
+<main>
+    <section id="crear-proyecto">
+        <h2>Crear Nuevo Proyecto</h2>
+        <form action="#" method="POST">
+            <div>
+                <label for="NombreProyecto">Nombre del Proyecto:</label>
+                <input type="text" id="NombreProyecto" name="NombreProyecto" required>
+            </div>
+            <div>
+                <label for="DescripcionProyecto">Descripción:</label>
+                <textarea id="DescripcionProyecto" name="DescripcionProyecto" rows="4" required></textarea>
+            </div>
+            <div>
+                <label for="FechaInicio">Fecha de Inicio:</label>
+                <input type="date" id="FechaInicio" name="FechaInicio" required>
+            </div>
+            <div>
+                <label for="FechaFin">Fecha de Fin:</label>
+                <input type="date" id="FechaFin" name="FechaFin" required>
+            </div>
+            <div>
+                <label for="Presupuesto">Presupuesto:</label>
+                <input type="number" id="Presupuesto" name="Presupuesto" required>
+            </div>
+            <div>
+                <label for="ClienteNombre">Nombre del Cliente:</label>
+                <input type="text" id="ClienteNombre" name="ClienteNombre" required>
+            </div>
+            <div>
+                <label for="ClienteEmail">Email del Cliente:</label>
+                <input type="email" id="ClienteEmail" name="ClienteEmail" required>
+            </div>
+            <div>
+                <label for="ClienteTelefono">Teléfono del Cliente:</label>
+                <input type="tel" id="ClienteTelefono" name="ClienteTelefono" required>
+            </div>
+            <button type="submit">Creación Proyecto</button>
+        </form>
+    </section>
+
+    <section id="listado-proyectos">
+        <h2>Listado de Proyectos</h2>
+        <h2>Detalle del Proyecto</h2>
+    <div>
+        <strong>Nombre del Proyecto:</strong>
+        <span id=></span>
+    </div>
+    <div>
+        <strong>Descripción:</strong>
+        <p id=></p>
+    </div>
+    <div>
+        <strong>Fecha de Inicio:</strong>
+        <span id=></span>
+    </div>
+    <div>
+        <strong>Fecha de Fin:</strong>
+        <span id=></span>
+    </div>
+    <div>
+        <strong>Presupuesto:</strong>
+        <span id=></span>
+    </div>
+    <div>
+        <strong>Nombre del Cliente:</strong>
+        <span id=></span>
+    </div>
+    <div>
+        <strong>Email del Cliente:</strong>
+        <span id=></span>
+    </div>
+    <div>
+        <strong>Teléfono del Cliente:</strong>
+        <span id=></span>
+    </div>
+</section>
+<section id="modificar-proyecto">
+    <h2>Modificar Proyecto</h2>
+    <form action="#" method="POST">
+        <div>
+            <label for="NombreProyectoMod">Nombre del Proyecto:</label>
+            <input type="text" id="NombreProyectoMod" name="NombreProyectoMod" required>
+        </div>
+        <div>
+            <label for="DescripcionProyectoMod">Descripción:</label>
+            <textarea id="DescripcionProyectoMod" name="DescripcionProyectoMod" rows="4" required></textarea>
+        </div>
+        <div>
+            <label for="FechaInicioMod">Fecha de Inicio:</label>
+            <input type="date" id="FechaInicioMod" name="FechaInicioMod" required>
+        </div>
+        <div>
+            <label for="FechaFinMod">Fecha de Fin:</label>
+            <input type="date" id="FechaFinMod" name="FechaFinMod" required>
+        </div>
+        <div>
+            <label for="PresupuestoMod">Presupuesto:</label>
+            <input type="number" id="PresupuestoMod" name="PresupuestoMod" required>
+        </div>
+        <div>
+            <label for="ClienteNombre-mod">Nombre del Cliente:</label>
+            <input type="text" id="ClienteNombreMod" name="ClienteNombreMod" required>
+        </div>
+        <div>
+            <label for="ClienteEmailMod">Email del Cliente:</label>
+            <input type="email" id="ClienteEmailMod" name="ClienteEmailMod" required>
+        </div>
+        <div>
+            <label for="ClienteTelefonoMod">Teléfono del Cliente:</label>
+            <input type="tel" id="ClienteTelefonoMod" name="ClienteTelefonoMod" required>
+        </div>
+        <button type="submit">Guardar Cambios</button>
+    </form>
+</section>
+<section id="borrar-proyecto">
+
+</section>
+<section id="crear-tarea">
+    <h2>Crear Nueva Tarea</h2>
+    <form action="#" method="POST">
+        <div>
+            <label for="NombreTarea">Nombre de la Tarea:</label>
+            <input type="text" id="NombreTarea" name="NombreTarea" required>
+        </div>
+        <div>
+            <label for="DescripcionTarea">Descripción:</label>
+            <textarea id="DescripcionTarea" name="DescripcionTarea" rows="4" required></textarea>
+        </div>
+        <div>
+            <label for="FechaInicioTarea">Fecha de Inicio:</label>
+            <input type="date" id="FechaInicioTarea" name="FechaInicioTarea" required>
+        </div>
+        <div>
+            <label for="FechaFinTarea">Fecha de Fin:</label>
+            <input type="date" id="FechaFinTarea" name="FechaFinTarea" required>
+        </div>
+        <div>
+            <label for="ResponsableTarea">Responsable:</label>
+            <input type="text" id="ResponsableTarea" name="ResponsableTarea" required>
+        </div>
+        <div>
+            <label for="PrioridadTarea">Nivel de Prioridad:</label>
+            <select id="PrioridadTarea" name="PrioridadTarea" required>
+                <option value="alta">Alta</option>
+                <option value="media">Media</option>
+                <option value="baja">Baja</option>
+            </select>
+        </div>
+        <div>
+            <label for="EstadoTarea">Estado de la Tarea:</label>
+            <select id="EstadoTarea" name="EstadoTarea" required>
+                <option value="abierta">Abierta</option>
+                <option value="asignada">Asignada</option>
+                <option value="en-proceso">En Proceso</option>
+                <option value="finalizada">Finalizada</option>
+            </select>
+        </div>
+        <div>
+            <label for="NotasTarea">Notas Adicionales:</label>
+            <textarea id="NotasTarea" name="NotasTarea" rows="4"></textarea>
+        </div>
+        <button type="submit">Crear Tarea</button>
+    </form>
+</section>
 </body>
 </html>

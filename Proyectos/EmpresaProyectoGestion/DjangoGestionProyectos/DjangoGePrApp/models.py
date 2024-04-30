@@ -1,5 +1,23 @@
 from django.db import models 
 
+class Empleado(models.Model):
+    nombre = models.CharField(max_length=100)
+    apellido = models.CharField(max_length=100)
+    dni = models.CharField(max_length=20)
+    telefono = models.CharField(max_length=20)
+    email = models.EmailField()
+
+    def __str__(self):
+        return f"{self.nombre} {self.apellido}"
+
+class Participa(models.Model):
+    proyecto = models.ForeignKey(Proyecto, on_delete=models.CASCADE)
+    tarea = models.ForeignKey(Tarea, on_delete=models.CASCADE)
+    empleado = models.ForeignKey(Empleado, on_delete=models.CASCADE)
+    cliente = models.ForeignKey(Cliente, on_delete=models.CASCADE)
+
+    def __str__(self):
+        return f"{self.empleado} participa en {self.proyecto} realizando {self.tarea}"
 
 class Proyecto(models.Model):
     Nombre = models.CharField(max_length=30)
@@ -44,5 +62,4 @@ class Empleado(models.Model):
     Empleado = models.ForeignKey(Empleado, on_delete=models.CASCADE)
     Horas = models.IntegerField()
 
-    
     
