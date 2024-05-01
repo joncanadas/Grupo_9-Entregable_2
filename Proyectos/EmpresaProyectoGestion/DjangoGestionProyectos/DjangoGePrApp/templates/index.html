@@ -13,6 +13,7 @@
     <section id="crear-proyecto">
       <h2>Crear Nuevo Proyecto</h2>
       <form action="#" method="POST">
+        {% csrf_token %}
         <div>
           <label for="NombreProyecto">Nombre del Proyecto:</label>
           <input
