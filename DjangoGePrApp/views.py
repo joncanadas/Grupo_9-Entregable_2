@@ -9,7 +9,7 @@ def index(request):
     return render(request, 'index.html', context)
 
 
-def listadoProyectos(request):
+def listarProyectos(request):
     proyectos = Proyecto.objects.all
     context = {'titulo_pagina' : 'Listado de Proyectos', 'lista_poryectos' : proyectos}
-    return render(request, 'listadoProyectos.html', context)
+    return render(request, 'listarProyectos.html', context)

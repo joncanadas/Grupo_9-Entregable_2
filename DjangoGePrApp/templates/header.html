@@ -5,12 +5,7 @@
   <body>
     <h1>Gestión de Proyectos - Deustotil Tech S.L.</h1>
     <nav>
-      <a href="{% url 'listadoProyectos' %}">Listar Proyecto</a>
-        <!--
-            <a href="{% url 'crearProyecto' %}">Crear  Proyecto</a>
-            <a href="{% url 'modificarProyecto' %}">Modificar Proyecto</a>
-            <a href="{% url 'crearTarea' %}">Crear Tarea</a>
-        -->
+      <a href="{% url 'listarProyectos' %}">Listar Proyecto</a>
     </nav>
     <h2>{{ titulo_pagina }}</h2>
     {% block contenido %} {% endblock %}
