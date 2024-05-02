@@ -6,11 +6,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Deustronic Components S.L</title>
     <link rel="stylesheet" href="{% static 'style.css' %}">
+    <link href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@200..900&display=swap" rel="stylesheet">
   </head>
   <body>
-    <h1>Gestión de Proyectos - Deustotil Tech S.L.</h1>
-    <nav>
-      <a href="{% url 'listarProyectos' %}">Listar Proyecto</a>
+    
+    <nav class="contenedor">
+      <div class="header">
+          <div class="logo"></div>
+          <h1 class="tituloIndex">Gestión de Proyectos - Deustotil Tech S.L.</h1>
+          <nav>
+              <ul>
+                  <li><a href="{% url 'listarProyectos' %}">Listar Proyecto</a></li>
+                  <li><a href="{% url 'index' %}">Index</a></li>
     </nav>
     <h2>{{ titulo_pagina }}</h2>
 
