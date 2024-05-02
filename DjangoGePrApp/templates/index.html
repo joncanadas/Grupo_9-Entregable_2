@@ -1,9 +1,11 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Deustronic Components S.L</title>
+    <link rel="stylesheet" href="{% static 'style.css' %}">
   </head>
   <body>
     <h1>Gestión de Proyectos - Deustotil Tech S.L.</h1>
@@ -16,12 +18,7 @@
         {% csrf_token %}
         <div>
           <label for="NombreProyecto">Nombre del Proyecto:</label>
-          <input
-            type="text"
-            id="NombreProyecto"
-            name="NombreProyecto"
-            required
-          />
+          <input type="text" id="NombreProyecto"name="NombreProyecto"required/>
         </div>
         <div>
           <label for="DescripcionProyecto">Descripción:</label>
