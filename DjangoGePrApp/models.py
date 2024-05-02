@@ -32,8 +32,18 @@ class Tarea(models.Model):
     Descripcion = models.CharField(max_length=300)
     Fecha_Inicio = models.DateField()
     Fecha_Fin = models.DateField()
-    Nivel_Prioridad = models.IntegerField(validators=[MaxValueValidator(3)])
-    Estado_Tarea = models.CharField(max_length=10)
+    Nivel_Prioridad = models.CharField(
+        max_length=10, choices=[("Alta", "Alta"), ("Media", "Media"), ("Baja", "Baja")]
+    )
+    Estado_Tarea = models.CharField(
+        max_length=10,
+        choices=[
+            ("abierta", "Abierta"),
+            ("asignada", "Asignada"),
+            ("en_proceso", "En Proceso"),
+            ("finalizada", "Finalizada"),
+        ],
+    )
     Notas = models.CharField(max_length=200)
 
 
@@ -53,7 +63,7 @@ class Encarga(models.Model):
     Num_Proyectos = models.IntegerField()
 
 
-#class Empleado(models.Model):
+# class Empleado(models.Model):
 #
 #   tarea = models.ForeignKey(Tarea, on_delete=models.CASCADE)
 #    DNI = models.CharField(max_length=9)
