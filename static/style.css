@@ -1,75 +1,125 @@
 .html {
-    box-sizing: border-box;
-    font-family: "Inconsolata", sans-serif;
+  box-sizing: border-box;
+  font-family: "Inconsolata", sans-serif;
 }
 
 .body {
-    margin: 0;
-    padding: 0;
-    background-color: white;
+  margin: 0;
+  padding: 0;
+  background-color: white;
 }
 body {
-    margin: 0;
-    padding: 0;
-    font-family: "Inconsolata", sans-serif;
-  }
+  margin: 0;
+  padding: 0;
+  font-family: "Inconsolata", sans-serif;
+}
 
 .h1, h2 {
-    text-align: center;
-    background-color:rgb(255, 255, 255);
-    border-top: 1px solid black;
+  text-align: center;
+  background-color:rgb(255, 255, 255);
+  border-top: 1px solid black;
 }
 .tituloIndex {
-    color: #eb8634;
-    margin-top: 0px;
-    margin-bottom: 80px;
-    text-align: center;
-    background-color: white;
-    border-top: 3px solid white;
-    font-size: 40px;
-  }
+  color: #efa162;
+  margin-top: 0px;
+  margin-bottom: 80px;
+  text-align: center;
+  background-color: white;
+  border-top: 3px solid white;
+  font-size: 40px;
+}
 
-  .header {
-    text-align: center;
-  }
+.header {
+  text-align: center;
+}
 
 .nav {
-    background-color: #eb8634;
-    padding: 10px;
+  background-color: #efa162;
+  padding: 10px;
 }
 
 .section {
-    background-color: #fff;
-    margin: 20px;
-    padding: 20px;
-    border-radius: 5px;
+  background-color: #fff;
+  margin: 20px;
+  padding: 20px;
+  border-radius: 5px;
 }
 
 .detallesProyecto {
-    margin: 20px auto;
-    padding: 20px;
-    border: 1px solid #d61a1a;
-    border-radius: 5px;
-    width: 80%;
-    text-align: center;
+  margin: 20px auto;
+  padding: 20px;
+  border: 1px solid #000000;
+  background-color: #efa162;
+  border-radius: 5px;
+  width: 80%;
+  text-align: center;
+  color: white;
+  font-size: 30px;
 }
 .label {
-    display: block;
-    margin-bottom: 5px;
+  display: block;
+  margin-bottom: 5px;
 }
 .detallesProyecto h3 {
-    color: orange; 
-  }
-  
+  color: #efa162; 
+  background-color: rgb(2, 2, 2) ;
+}
+
 .detallesProyecto div {
-    margin-bottom: 10px;
-  }
-  
+  margin-bottom: 10px;
+}
+
 .detallesProyecto strong {
-    font-weight: bold;
-  }
-  
+  font-weight: bold;
+}
+
 .detallesProyecto span {
-    margin-left: 10px;
-    color: #666;
-  }
+  margin-left: 10px;
+  color: #666;
+}
+
+nav ul li {
+  display: inline;
+  margin: 0 10px;
+  color: #efa162;
+}
+
+.contenedor {
+  width: 100%;
+  background-color: #f2f2f2;
+}
+
+
+.logo img {
+  width: 100px; 
+  height: auto;
+    background-image: url('../img/OIG3.jpg');
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 100px; 
+    height: 100px;
+    background-color: black;
+    float:initial;
+    
+}
+nav ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+nav ul li {
+  display: inline;
+  margin-right: 20px;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: #efa162;
+  font-weight: bold;
+}
+
+nav ul li a:hover {
+  color: #efa162;
+}
+
