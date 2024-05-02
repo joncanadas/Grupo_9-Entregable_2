@@ -20,12 +20,16 @@ class Proyecto(models.Model):
     Fecha_Fin = models.DateField()
     Presupuesto = models.IntegerField()
 
+    def __str__(self):
+        return f"Nombre: {self.Nombre} - Presupuesto: {self.Presupuesto}€"
 
 class Cliente(models.Model):
     Nombre = models.CharField(max_length=30)
     Telefono = models.IntegerField()
     Direccion = models.CharField(max_length=100)
 
+    def __str__(self):
+        return f"Nombre: {self.Nombre} - Teléfono: {self.Telefono}"
 
 class Tarea(models.Model):
     Nombre = models.CharField(max_length=30)
@@ -45,6 +49,9 @@ class Tarea(models.Model):
         ],
     )
     Notas = models.CharField(max_length=200)
+
+    def __str__(self):
+        return f"Nombre: {self.Nombre} - Nivel Prioridad: {self.Nivel_Prioridad}"
 
 
 class Participa(models.Model):
