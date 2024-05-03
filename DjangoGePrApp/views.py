@@ -42,3 +42,8 @@ def borrarProyecto(request, proyecto_id):
     proyecto = Proyecto.objects.get(pk=proyecto_id)
     proyecto.delete()
     return redirect('listados')
+
+def borrarTarea(request, tarea_id):
+    proyecto = Tarea.objects.get(pk=tarea_id)
+    proyecto.delete()
+    return redirect('listados')

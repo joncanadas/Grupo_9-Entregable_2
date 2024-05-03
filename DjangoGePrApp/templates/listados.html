@@ -81,6 +81,8 @@
     <strong>Notas: </strong> {{ tar.Notas }}
     <span id="notas-tarea"></span>
   </div>
+
+  <button class="nav" type="submit"><a href="{% url 'borrarTarea' tar.id %}">Borrar</a></button>
 </div>
 {% endfor %}
 
