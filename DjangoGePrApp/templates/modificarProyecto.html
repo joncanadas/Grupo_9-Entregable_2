@@ -2,75 +2,41 @@
 
 {% block contenido %} 
 
-<form action="#" method="POST">
+<!-- Formulario -->
+<form class="formulario" action="#" method="POST">
     <div>
-      <label for="NombreProyectoMod">Nombre del Proyecto:</label>
-      <input
-        type="text"
-        id="NombreProyectoMod"
-        name="NombreProyectoMod"
-        required
-      />
+        <label for="NombreProyectoMod">Nombre del Proyecto:</label>
+        <input type="text" id="NombreProyectoMod" name="NombreProyectoMod" required/>
     </div>
     <div>
-      <label for="DescripcionProyectoMod">Descripción:</label>
-      <textarea
-        id="DescripcionProyectoMod"
-        name="DescripcionProyectoMod"
-        rows="4"
-        required
-      ></textarea>
+        <label for="DescripcionProyectoMod">Descripción:</label>
+        <textarea id="DescripcionProyectoMod" name="DescripcionProyectoMod" rows="4" required></textarea>
     </div>
     <div>
-      <label for="FechaInicioMod">Fecha de Inicio:</label>
-      <input
-        type="date"
-        id="FechaInicioMod"
-        name="FechaInicioMod"
-        required
-      />
+        <label for="FechaInicioMod">Fecha de Inicio:</label>
+        <input type="date" id="FechaInicioMod" name="FechaInicioMod" required />
     </div>
     <div>
-      <label for="FechaFinMod">Fecha de Fin:</label>
-      <input type="date" id="FechaFinMod" name="FechaFinMod" required />
+        <label for="FechaFinMod">Fecha de Fin:</label>
+        <input type="date" id="FechaFinMod" name="FechaFinMod" required />
     </div>
     <div>
-      <label for="PresupuestoMod">Presupuesto:</label>
-      <input
-        type="number"
-        id="PresupuestoMod"
-        name="PresupuestoMod"
-        required
-      />
+        <label for="PresupuestoMod">Presupuesto:</label>
+        <input type="number" id="PresupuestoMod" name="PresupuestoMod" required />
     </div>
     <div>
-      <label for="ClienteNombre-mod">Nombre del Cliente:</label>
-      <input
-        type="text"
-        id="ClienteNombreMod"
-        name="ClienteNombreMod"
-        required
-      />
+        <label for="ClienteNombreMod">Nombre del Cliente:</label>
+        <input type="text" id="ClienteNombreMod" name="ClienteNombreMod" required />
     </div>
     <div>
-      <label for="ClienteEmailMod">Email del Cliente:</label>
-      <input
-        type="email"
-        id="ClienteEmailMod"
-        name="ClienteEmailMod"
-        required
-      />
+        <label for="ClienteEmailMod">Email del Cliente:</label>
+        <input type="email" id="ClienteEmailMod" name="ClienteEmailMod" required />
     </div>
     <div>
-      <label for="ClienteTelefonoMod">Teléfono del Cliente:</label>
-      <input
-        type="tel"
-        id="ClienteTelefonoMod"
-        name="ClienteTelefonoMod"
-        required
-      />
+        <label for="ClienteTelefonoMod">Teléfono del Cliente:</label>
+        <input type="tel" id="ClienteTelefonoMod" name="ClienteTelefonoMod" required />
     </div>
     <button type="submit">Guardar Cambios</button>
-  </form>
+</form>
 
 {% endblock %}
