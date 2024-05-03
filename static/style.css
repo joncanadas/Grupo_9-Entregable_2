@@ -21,17 +21,28 @@ body {
 }
 .tituloIndex {
   color: #efa162;
-  margin-top: 0px;
   margin-bottom: 80px;
   text-align: center;
   background-color: white;
   border-top: 3px solid white;
   font-size: 40px;
+  margin: 0; 
 }
 
 .header {
   text-align: center;
+  padding: 10px;
 }
+
+.header0{
+  text-align: left;
+  padding: 10px;
+}
+
+.header0 img{
+  max-height: 90px;
+}
+
 
 .nav {
   background-color: #efa162;
@@ -89,19 +100,16 @@ nav ul li {
   background-color: #f2f2f2;
 }
 
+.logo {
+  position: fixed;
+  z-index: 1000;
+}
 
 .logo img {
-  width: 100px; 
+  width: 100px;
   height: auto;
-    background-image: url('../img/OIG3.jpg');
-    background-size: contain;
-    background-repeat: no-repeat;
-    width: 100px; 
-    height: 100px;
-    background-color: black;
-    float:initial;
-    
 }
+
 nav ul {
   list-style-type: none;
   margin: 0;
@@ -244,6 +252,10 @@ nav ul li a:hover {
 .detallesTarea span {
   margin-left: 10px;
   color: #666;
+}
+
+button[type="submit"] a {
+  color: white;
 }
 
 .submitProyecto[type="submit"] {

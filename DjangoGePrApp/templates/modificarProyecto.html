@@ -1,31 +1,92 @@
-{% extends "header.html" %}
+    {% extends "header.html" %}
 
-{% block contenido %} 
+    {% block contenido %} 
 
-<!-- Formulario -->
-<form class="formulario" action="{% url 'modificarProyecto' proyecto.pk %}" method="post">
-  {% csrf_token %}
-    <div>
-        <label>Nombre del Proyecto:</label>
-        <input type="text"name="NombreProyectoMod" required/>
-    </div>
-    <div>
-        <label>Descripción:</label>
-        <textarea name="DescripcionProyectoMod" rows="4" required></textarea>
-    </div>
-    <div>
-        <label>Fecha de Inicio:</label>
-        <input type="date" name="FechaInicioMod" required />
-    </div>
-    <div>
-        <label>Fecha de Fin:</label>
-        <input type="date" name="FechaFinMod" required />
-    </div>
-    <div>
-        <label>Presupuesto:</label>
-        <input type="number" name="PresupuestoMod" required />
-    </div>
+    <!-- Formulario -->
+    <form class="formulario" action="{% url 'modificarProyecto' proyecto.pk %}" method="POST">
+    {% csrf_token %}
+        <div>
+            <label for="NombreProyectoMod">Nombre del Proyecto:</label>
+            <input type="text" id="NombreProyectoMod" name="NombreProyectoMod" required/>
+        </div>
+        <div>
+            <label for="DescripcionProyectoMod">Descripción:</label>
+            <textarea id="DescripcionProyectoMod" name="DescripcionProyectoMod" rows="4" required></textarea>
+        </div>
+        <div>
+            <label for="FechaInicioMod">Fecha de Inicio:</label>
+            <input type="date" id="FechaInicioMod" name="FechaInicioMod" required />
+        </div>
+        <div>
+            <label for="FechaFinMod">Fecha de Fin:</label>
+            <input type="date" id="FechaFinMod" name="FechaFinMod" required />
+        </div>
+        <div>
+            <label for="PresupuestoMod">Presupuesto:</label>
+            <input type="number" id="PresupuestoMod" name="PresupuestoMod" required />
+        </div>
+        <div>
+            <label for="ClienteNombreMod">Nombre del Cliente:</label>
+            <input type="text" id="ClienteNombreMod" name="ClienteNombreMod" required />
+        </div>
+        <div>
+            <label for="ClienteEmailMod">Email del Cliente:</label>
+            <input type="email" id="ClienteEmailMod" name="ClienteEmailMod" required />
+        </div>
+        <div>
+            <label for="ClienteTelefonoMod">Teléfono del Cliente:</label>
+            <input type="tel" id="ClienteTelefonoMod" name="ClienteTelefonoMod" required />
+        </div>
+    </form>
+    <form method="post" action="{% url 'modificarProyecto' proyecto.pk %}">
+    {% csrf_token %}
     <input type="submit" value="Guardar cambios">
-</form>
+    </form>
 
-{% endblock %}
+    {% endblock %}
+
+
+
+    {% extends "header.html" %}
+
+    {% block contenido %} 
+
+    <form class="formulario" action="{% url 'modificarProyecto' proyecto.pk %}" method="POST">
+    {% csrf_token %}
+        <div>
+            <label for="NombreProyectoMod">Nombre del Proyecto:</label>
+            <input type="text" id="NombreProyectoMod" name="NombreProyectoMod" required/>
+        </div>
+        <div>
+            <label for="DescripcionProyectoMod">Descripción:</label>
+            <textarea id="DescripcionProyectoMod" name="DescripcionProyectoMod" rows="4" required></textarea>
+        </div>
+        <div>
+            <label for="FechaInicioMod">Fecha de Inicio:</label>
+            <input type="date" id="FechaInicioMod" name="FechaInicioMod" required />
+        </div>
+        <div>
+            <label for="FechaFinMod">Fecha de Fin:</label>
+            <input type="date" id="FechaFinMod" name="FechaFinMod" required />
+        </div>
+        <div>
+            <label for="PresupuestoMod">Presupuesto:</label>
+            <input type="number" id="PresupuestoMod" name="PresupuestoMod" required />
+        </div>
+        <div>
+            <label for="ClienteNombreMod">Nombre del Cliente:</label>
+            <input type="text" id="ClienteNombreMod" name="ClienteNombreMod" required />
+        </div>
+        <div>
+            <label for="ClienteEmailMod">Email del Cliente:</label>
+            <input type="email" id="ClienteEmailMod" name="ClienteEmailMod" required />
+        </div>
+        <div>
+            <label for="ClienteTelefonoMod">Teléfono del Cliente:</label>
+            <input type="tel" id="ClienteTelefonoMod" name="ClienteTelefonoMod" required />
+        </div>
+    </form>
+    <form method="post" action="{% url 'modificarProyecto' proyecto.pk %}">
+    {% csrf_token %}
+    <input type="submit" value="Guardar cambios">
+    </form>

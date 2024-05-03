@@ -44,6 +44,8 @@
     <span id="telefono-cliente"></span>
   </div>
   <button class="nav" type="submit"><a href="{% url 'modificarProyecto' pro.id %}">Modificar</a></button>
+  <button class="nav" type="submit"><a href="{% url 'borrarProyecto' pro.id %}">Borrar</a></button>
+  
 </div>
 {% endfor %}
 
@@ -79,6 +81,8 @@
     <strong>Notas: </strong> {{ tar.Notas }}
     <span id="notas-tarea"></span>
   </div>
+
+  <button class="nav" type="submit"><a href="{% url 'borrarTarea' tar.id %}">Borrar</a></button>
 </div>
 {% endfor %}
 
