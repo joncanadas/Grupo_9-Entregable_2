@@ -3,11 +3,18 @@ from django.shortcuts import redirect
 from django.shortcuts import render
 from django.forms import modelform_factory
 from .models import Proyecto, Tarea
+from .forms import ProyectoForm, TareaForm
 
 # Create your views here.
 def crearProyecto(request):
-    proyectos = Proyecto.objects.all
-    context = {'titulo_pagina' : 'Crear Proyectos', 'lista_proyectos' : proyectos}
+    form = ProyectoForm()
+    if request.method == 'POST':
+        form = ProyectoForm(request.POST)
+        if form.is_valid():
+            form.save()
+            return redirect('listados')
+    
+    context = {'form': form}
     return render(request, 'crearProyecto.html', context)
 
 
@@ -34,8 +41,14 @@ def modificarProyecto(request, proyecto_id):
     return render(request, 'modificarProyecto.html', context)
 
 def crearTarea(request):
-    tareas = Tarea.objects.all
-    context = {'titulo_pagina' : 'Crear Tareas', 'lista_tareas' : tareas}
+    form = TareaForm()
+    if request.method == 'POST':
+        form = TareaForm(request.POST)
+        if form.is_valid():
+            form.save()
+            return redirect('listados')
+    
+    context = {'form': form}
     return render(request, 'crearTarea.html', context)
 
 def borrarProyecto(request, proyecto_id):

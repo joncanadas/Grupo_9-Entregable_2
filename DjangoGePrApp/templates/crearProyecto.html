@@ -4,38 +4,8 @@
 
 <form class="formulario" action="#" method="POST">
     {% csrf_token %}
-    <div>
-        <label for="NombreProyecto">Nombre del Proyecto:</label>
-        <input type="text" id="NombreProyecto" name="NombreProyecto" required/>
-    </div>
-    <div>
-        <label for="DescripcionProyecto">Descripción:</label>
-        <textarea id="DescripcionProyecto" name="DescripcionProyecto" rows="4"  required></textarea>
-    </div>
-    <div>
-        <label for="FechaInicio">Fecha de Inicio:</label>
-        <input type="date" id="FechaInicio" name="FechaInicio" required />
-    </div>
-    <div>
-        <label for="FechaFin">Fecha de Fin:</label>
-        <input type="date" id="FechaFin" name="FechaFin" required />
-    </div>
-    <div>
-        <label for="Presupuesto">Presupuesto:</label>
-        <input type="number" id="Presupuesto" name="Presupuesto" required />
-    </div>
-    <div>
-        <label for="ClienteNombre">Nombre del Cliente:</label>
-        <input type="text" id="ClienteNombre" name="ClienteNombre" required />
-    </div>
-    <div>
-        <label for="ClienteEmail">Email del Cliente:</label>
-        <input type="email" id="ClienteEmail" name="ClienteEmail" required />
-    </div>
-    <div>
-        <label for="ClienteTelefono">Teléfono del Cliente:</label>
-        <input type="tel" id="ClienteTelefono" name="ClienteTelefono" required />
-    </div>
+    {{form}}
+    
     <button type="submit">Creación Proyecto</button>
 </form>
 {% for pro in lista_proyectos %}

@@ -4,47 +4,9 @@
 
 <!-- Formulario -->
 <form class="formulario" action="#" method="POST">
-    <div>
-        <label for="NombreTarea">Nombre de la Tarea:</label>
-        <input type="text" id="NombreTarea" name="NombreTarea" required />
-    </div>
-    <div>
-        <label for="DescripcionTarea">Descripción:</label>
-        <textarea id="DescripcionTarea" name="DescripcionTarea" rows="4" required></textarea>
-    </div>
-    <div>
-        <label for="FechaInicioTarea">Fecha de Inicio:</label>
-        <input type="date" id="FechaInicioTarea" name="FechaInicioTarea" required />
-    </div>
-    <div>
-        <label for="FechaFinTarea">Fecha de Fin:</label>
-        <input type="date" id="FechaFinTarea" name="FechaFinTarea" required />
-    </div>
-    <div>
-        <label for="ResponsableTarea">Responsable:</label>
-        <input type="text" id="ResponsableTarea" name="ResponsableTarea" required />
-    </div>
-    <div>
-        <label for="PrioridadTarea">Nivel de Prioridad:</label>
-        <select id="PrioridadTarea" name="PrioridadTarea" required>
-            <option value="alta">Alta</option>
-            <option value="media">Media</option>
-            <option value="baja">Baja</option>
-        </select>
-    </div>
-    <div>
-        <label for="EstadoTarea">Estado de la Tarea:</label>
-        <select id="EstadoTarea" name="EstadoTarea" required>
-            <option value="abierta">Abierta</option>
-            <option value="asignada">Asignada</option>
-            <option value="en-proceso">En Proceso</option>
-            <option value="finalizada">Finalizada</option>
-        </select>
-    </div>
-    <div>
-        <label for="NotasTarea">Notas Adicionales:</label>
-        <textarea id="NotasTarea" name="NotasTarea" rows="4"></textarea>
-    </div>
+    {% csrf_token %}
+    {{form}}
+
     <button type="submit">Crear Tarea</button>
 </form>
 

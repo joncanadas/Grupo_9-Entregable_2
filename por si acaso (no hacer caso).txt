@@ -1,0 +1,82 @@
+Proyecto Formulario
+
+<div>
+        <label for="NombreProyecto">Nombre del Proyecto:</label>
+        <input type="text" id="NombreProyecto" name="NombreProyecto" required/>
+    </div>
+    <div>
+        <label for="DescripcionProyecto">Descripción:</label>
+        <textarea id="DescripcionProyecto" name="DescripcionProyecto" rows="4"  required></textarea>
+    </div>
+    <div>
+        <label for="FechaInicio">Fecha de Inicio:</label>
+        <input type="date" id="FechaInicio" name="FechaInicio" required />
+    </div>
+    <div>
+        <label for="FechaFin">Fecha de Fin:</label>
+        <input type="date" id="FechaFin" name="FechaFin" required />
+    </div>
+    <div>
+        <label for="Presupuesto">Presupuesto:</label>
+        <input type="number" id="Presupuesto" name="Presupuesto" required />
+    </div>
+    <div>
+        <label for="ClienteNombre">Nombre del Cliente:</label>
+        <input type="text" id="ClienteNombre" name="ClienteNombre" required />
+    </div>
+    <div>
+        <label for="ClienteEmail">Email del Cliente:</label>
+        <input type="email" id="ClienteEmail" name="ClienteEmail" required />
+    </div>
+    <div>
+        <label for="ClienteTelefono">Teléfono del Cliente:</label>
+        <input type="tel" id="ClienteTelefono" name="ClienteTelefono" required />
+    </div>
+
+
+
+
+Tarea Formulario
+
+
+    <div>
+        <label for="NombreTarea">Nombre de la Tarea:</label>
+        <input type="text" id="NombreTarea" name="NombreTarea" required />
+    </div>
+    <div>
+        <label for="DescripcionTarea">Descripción:</label>
+        <textarea id="DescripcionTarea" name="DescripcionTarea" rows="4" required></textarea>
+    </div>
+    <div>
+        <label for="FechaInicioTarea">Fecha de Inicio:</label>
+        <input type="date" id="FechaInicioTarea" name="FechaInicioTarea" required />
+    </div>
+    <div>
+        <label for="FechaFinTarea">Fecha de Fin:</label>
+        <input type="date" id="FechaFinTarea" name="FechaFinTarea" required />
+    </div>
+    <div>
+        <label for="ResponsableTarea">Responsable:</label>
+        <input type="text" id="ResponsableTarea" name="ResponsableTarea" required />
+    </div>
+    <div>
+        <label for="PrioridadTarea">Nivel de Prioridad:</label>
+        <select id="PrioridadTarea" name="PrioridadTarea" required>
+            <option value="alta">Alta</option>
+            <option value="media">Media</option>
+            <option value="baja">Baja</option>
+        </select>
+    </div>
+    <div>
+        <label for="EstadoTarea">Estado de la Tarea:</label>
+        <select id="EstadoTarea" name="EstadoTarea" required>
+            <option value="abierta">Abierta</option>
+            <option value="asignada">Asignada</option>
+            <option value="en-proceso">En Proceso</option>
+            <option value="finalizada">Finalizada</option>
+        </select>
+    </div>
+    <div>
+        <label for="NotasTarea">Notas Adicionales:</label>
+        <textarea id="NotasTarea" name="NotasTarea" rows="4"></textarea>
+    </div>
