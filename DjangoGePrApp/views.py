@@ -17,20 +17,15 @@ def listados(request):
     context = {'titulo_pagina' : 'Listados de Proyectos y Tareas', 'lista_proyectos' : proyectos, 'lista_tareas' : tareas}
     return render(request, 'listados.html', context)
 
-def modificarProyecto(request, proyecto_id):
-    proyecto = Proyecto.objects.get(pk=proyecto_id)
-    form_Proyecto = modelform_factory(Proyecto)
-    
-    if request.method == 'POST':
-        form = form_Proyecto(request.POST, instance=proyecto)
+def modificar_Proyecto(request, proyecto_id):
+    proyecto = Proyecto.objects.get(pk=proyecto_id)    
+
+    Descripcion = request.POST["DescripcionProyectoMod"]
+    Fecha_Inicio = request.POST["FechaInicioMod"]
+    Fecha_Fin = request.POST["FechaFinMod"]
+    Presupuesto = request.POST["PresupuestoMod"]
         
-        if form.is_valid():
-            form.save()
-            return redirect('detalle_proyecto', pk=proyecto.pk)
-    else:
-        form = modelform_factory(instance=proyecto)
-        
-    context = {'titulo_pagina' : 'Modificar Proyectos', 'form': form, 'proyecto': proyecto}
+    context = {'titulo_pagina' : 'Modificar Proyectos', 'proyecto': proyecto}
     return render(request, 'modificarProyecto.html', context)
 
 def crearTarea(request):
