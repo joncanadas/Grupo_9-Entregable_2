@@ -1,0 +1,80 @@
+{% extends "header.html" %}
+
+{% block contenido %} 
+
+<button type="submit"><a href="{% url 'crearProyecto' %}">Crear Proyecto</a></button>
+<button type="submit"><a href="{% url 'crearTareas' %}">Crear Tarea</a></button>
+{% for pro in lista_proyectos %}
+<h3 class="detallesProyecto">Detalles del Proyecto</h3>
+<div>
+  <div>
+    <strong>Nombre del Proyecto:</strong> {{ pro.Nombre }}
+    <span id="nombre-proyecto"></span>
+  </div>
+  <div>
+    <strong>Descripción: </strong> {{ pro.Descripcion }}
+    <span id="descripcion-proyecto"></span>
+  </div>
+  <div>
+    <strong>Fecha de Inicio: </strong> {{ pro.Fecha_Inicio }}
+    <span id="fecha-inicio"></span>
+  </div>
+  <div>
+    <strong>Fecha de Fin: </strong> {{ pro.Fecha_Fin }}
+    <span id="fecha-fin"></span>
+  </div>
+  <div>
+    <strong>Presupuesto: </strong> {{ pro.Presupuesto }}
+    <span id="presupuesto"></span>
+  </div>
+  <div>
+    <strong>Nombre del Cliente:</strong>
+    <span id="nombre-cliente"></span>
+  </div>
+  <div>
+    <strong>Email del Cliente:</strong>
+    <span id="email-cliente"></span>
+  </div>
+  <div>
+    <strong>Teléfono del Cliente:</strong>
+    <span id="telefono-cliente"></span>
+  </div>
+  <button type="submit"><a href="{% url 'modificarProyectos' %}">Modificar</a></button>
+</div>
+{% endfor %}
+
+{% for tar in lista_tareas %}
+<h3 class="detallesTarea">Detalles de la Tarea</h3>
+<div>
+  <div>
+    <strong>Nombre de la Tarea:</strong> {{ tar.Nombre }}
+    <span id="nombre-tarea"></span>
+  </div>
+  <div>
+    <strong>Descripción: </strong> {{ tar.Descripcion }}
+    <span id="descripcion-tarea"></span>
+  </div>
+  <div>
+    <strong>Fecha de Inicio: </strong> {{ tar.Fecha_Inicio }}
+    <span id="fecha-inicio"></span>
+  </div>
+  <div>
+    <strong>Fecha de Fin: </strong> {{ tar.Fecha_Fin }}
+    <span id="fecha-fin"></span>
+  </div>
+  <div>
+    <strong>Nivel de Prioridad: </strong> {{ tar.Nivel_Prioridad }}
+    <span id="nivel_prioridad-tarea"></span>
+  </div>
+  <div>
+    <strong>Estado de la Tarea: </strong> {{ tar.Estado_Tarea }}
+    <span id="estado-tarea"></span>
+  </div>
+  <div>
+    <strong>Notas: </strong> {{ tar.Notas }}
+    <span id="notas-tarea"></span>
+  </div>
+</div>
+{% endfor %}
+
+{% endblock %}

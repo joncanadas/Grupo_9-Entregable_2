@@ -3,16 +3,17 @@ from django.shortcuts import render
 from .models import Proyecto, Tarea
 
 # Create your views here.
-def index(request):
+def crearProyecto(request):
     proyectos = Proyecto.objects.all
     context = {'titulo_pagina' : 'Crear Proyectos', 'lista_proyectos' : proyectos}
-    return render(request, 'index.html', context)
+    return render(request, 'crearProyecto.html', context)
 
 
-def listarProyectos(request):
+def listados(request):
     proyectos = Proyecto.objects.all
-    context = {'titulo_pagina' : 'Listado de Proyectos', 'lista_proyectos' : proyectos}
-    return render(request, 'listarProyectos.html', context)
+    tareas = Tarea.objects.all
+    context = {'titulo_pagina' : 'Listados de Proyectos y Tareas', 'lista_proyectos' : proyectos, 'lista_tareas' : tareas}
+    return render(request, 'listados.html', context)
 
 def modificarProyectos(request):
     proyectos = Proyecto.objects.all

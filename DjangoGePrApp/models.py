@@ -21,7 +21,7 @@ class Proyecto(models.Model):
     Presupuesto = models.IntegerField()
 
     def __str__(self):
-        return f"Nombre: {self.Nombre} - Presupuesto: {self.Presupuesto}€"
+        return f"Id: {self.id} - Nombre: {self.Nombre} - Presupuesto: {self.Presupuesto}€"
 
 class Cliente(models.Model):
     Nombre = models.CharField(max_length=30)
@@ -51,7 +51,7 @@ class Tarea(models.Model):
     Notas = models.CharField(max_length=200)
 
     def __str__(self):
-        return f"Nombre: {self.Nombre} - Nivel Prioridad: {self.Nivel_Prioridad}"
+        return f"Id: {self.id} - Nombre: {self.Nombre} - Nivel Prioridad: {self.Nivel_Prioridad}"
 
 
 class Participa(models.Model):
