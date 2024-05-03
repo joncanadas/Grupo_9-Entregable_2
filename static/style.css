@@ -124,6 +124,21 @@ nav ul li a:hover {
 }
 
 
+.nav {
+  background-color: #f2f2f2;
+  padding: 10px;
+  display: inline-block;
+  margin-right: 20px;
+  color: #efa162;
+  font-weight: bold;
+  text-decoration: none;
+  border: none;
+  cursor: pointer;
+}
+
+.nav a:hover{
+  color: #efa162;
+}
 
 .formulario {
   margin: 20px auto;
@@ -178,7 +193,7 @@ nav ul li a:hover {
 .detallesProyectoindex {
   margin: 20px auto;
   padding: 20px;
-  border: 1px solid #000000;
+  border: 1px solid #ffffff;
   background-color: #efa162;
   border-radius: 5px;
   width: 80%;
@@ -199,3 +214,47 @@ nav ul li a:hover {
   margin-left: 10px;
   color: #666;
 }
+
+
+.detallesTarea {
+  margin: 20px auto;
+  padding: 20px;
+  border: 1px solid #efa162;
+  background-color: #efa162;
+  border-radius: 5px;
+  width: 80%;
+  text-align: center;
+  color: white;
+  font-size: 30px;
+}
+
+.detallesTarea h3 {
+  color: #efa162; 
+  background-color: rgb(2, 2, 2) ;
+}
+
+.detallesTarea div {
+  margin-bottom: 10px;
+}
+
+.detallesTarea strong {
+  font-weight: bold;
+}
+
+.detallesTarea span {
+  margin-left: 10px;
+  color: #666;
+}
+
+.submitProyecto[type="submit"] {
+  background-color: #4CAF50;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.detallesProyecto button[type="submit"]:hover {
+  background-color: #45a049;
+} 
