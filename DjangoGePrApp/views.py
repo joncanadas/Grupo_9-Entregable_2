@@ -37,3 +37,8 @@ def crearTarea(request):
     tareas = Tarea.objects.all
     context = {'titulo_pagina' : 'Crear Tareas', 'lista_tareas' : tareas}
     return render(request, 'crearTarea.html', context)
+
+def borrarProyecto(request, proyecto_id):
+    proyecto = Proyecto.objects.get(pk=proyecto_id)
+    proyecto.delete()
+    return redirect('listados')
