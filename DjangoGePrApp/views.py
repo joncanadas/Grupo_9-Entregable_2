@@ -1,7 +1,7 @@
 from django.http import HttpResponse
 from django.shortcuts import redirect
 from django.shortcuts import render
-from django.forms import modelform_factory
+from .forms import ProyectoForm
 from .models import Proyecto, Tarea
 
 # Create your views here.
@@ -19,18 +19,9 @@ def listados(request):
 
 def modificarProyecto(request, proyecto_id):
     proyecto = Proyecto.objects.get(pk=proyecto_id)
-    form_Proyecto = modelform_factory(Proyecto)
-    
-    if request.method == 'POST':
-        form = form_Proyecto(request.POST, instance=proyecto)
-        
-        if form.is_valid():
-            form.save()
-            return redirect('detalle_proyecto', pk=proyecto.pk)
-    else:
-        form = modelform_factory(instance=proyecto)
-        
-    context = {'titulo_pagina' : 'Modificar Proyectos', 'form': form, 'proyecto': proyecto}
+    form = ProyectoForm()
+    context = {'titulo_pagina' : 'Modificar Proyecto', 
+               'proyecto' : proyecto, 'form' : form}
     return render(request, 'modificarProyecto.html', context)
 
 def crearTarea(request):
