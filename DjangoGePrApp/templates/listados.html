@@ -31,18 +31,6 @@
     <strong>Presupuesto: </strong> {{ pro.Presupuesto }}
     <span id="presupuesto"></span>
   </div>
-  <div>
-    <strong>Nombre del Cliente:</strong>
-    <span id="nombre-cliente"></span>
-  </div>
-  <div>
-    <strong>Email del Cliente:</strong>
-    <span id="email-cliente"></span>
-  </div>
-  <div>
-    <strong>Teléfono del Cliente:</strong>
-    <span id="telefono-cliente"></span>
-  </div>
   <button class="nav" type="submit"><a href="{% url 'modificarProyecto' pro.id %}">Modificar</a></button>
   <button class="nav" type="submit"><a href="{% url 'borrarProyecto' pro.id %}">Borrar</a></button>
   
@@ -81,7 +69,7 @@
     <strong>Notas: </strong> {{ tar.Notas }}
     <span id="notas-tarea"></span>
   </div>
-
+  <button class="nav" type="submit"><a href="{% url 'modificarTarea' tar.id %}">Modificar</a></button>
   <button class="nav" type="submit"><a href="{% url 'borrarTarea' tar.id %}">Borrar</a></button>
 </div>
 {% endfor %}

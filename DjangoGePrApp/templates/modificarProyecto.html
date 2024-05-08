@@ -3,10 +3,11 @@
     {% block contenido %} 
 
     <!-- Formulario -->
-    <form class="formulario" action="{% url 'modificarProyecto' proyecto.pk %}" method="POST">
+    <form class="formulario" action="#" method="POST">
     {% csrf_token %}
     {{ form }}
-    <input type="submit" value="Guardar Cambios"/>
+
+    <button type="submit">Guardar Cambios</button>
     </form>
 
     {% endblock %}

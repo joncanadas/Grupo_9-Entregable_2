@@ -4,10 +4,10 @@
 
 <!-- Formulario -->
 <form class="formulario" action="#" method="POST">
-    {% csrf_token %}
-    {{form}}
+{% csrf_token %}
+{{ form }}
 
-    <button type="submit">Crear Tarea</button>
+<button type="submit">Guardar Cambios</button>
 </form>
 
 {% endblock %}

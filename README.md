@@ -2,6 +2,4 @@ Enlace al repositorio: https://github.com/joncanadas/Grupo_9-Entregable_2 (el re
 
 Funcionalidades adicionales: Ninguna, las funcionalidades son las que aparecen en la descripción del Reto 3.
 
-Funcionalidades con errores: Ninguna
-
-Documentación adicional:
+Funcionalidades con errores: La de update da error, ya sabemos el fallo pero por timepo no nos da para arreglarlo en esta entrega, en la siguiente estará solucionado.

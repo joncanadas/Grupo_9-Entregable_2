@@ -69,18 +69,3 @@ class Encarga(models.Model):
     cliente = models.ForeignKey(Cliente, on_delete=models.CASCADE)
     Num_Proyectos = models.IntegerField()
 
-
-# class Empleado(models.Model):
-#
-#   tarea = models.ForeignKey(Tarea, on_delete=models.CASCADE)
-#    DNI = models.CharField(max_length=9)
-#    Nombre = models.CharField(max_length=20)
-#    Apellido = models.CharField(max_length=20)
-#    Telefono = models.IntegerField()
-#    Email = models.CharField(max_length=30)
-#
-#    class Participa(models.Model):
-#        proyecto = models.ForeignKey(Proyecto, on_delete=models.CASCADE)
-#        tarea = models.ForeignKey(Tarea, on_delete=models.CASCADE)
-#        Empleado = models.ForeignKey(Empleado, on_delete=models.CASCADE)
-#        Horas = models.IntegerField()
