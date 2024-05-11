@@ -74,4 +74,54 @@
 </div>
 {% endfor %}
 
+{% for emp in lista_empleados %}
+
+<h3 class="detallesEmpleado">Detalles del Empleado</h3>
+<div class="formulario">
+  <div>
+    <strong>Nombre:</strong> {{ emp.nombre }}
+    <span id="nombre-empleado"></span>
+  </div>
+  <div>
+    <strong>Apellido: </strong> {{ emp.apellido }}
+    <span id="apellido-empleado"></span>
+  </div>
+  <div>
+    <strong>DNI: </strong> {{ emp.dni }}
+    <span id="dni-empleado"></span>
+  </div>
+  <div>
+    <strong>Teléfono: </strong> {{ emp.telefono }}
+    <span id="telefono-empleado"></span>
+  </div>
+  <div>
+    <strong>Email: </strong> {{ emp.email }}
+    <span id="email-empleado"></span>
+  </div>
+  <button class="nav" type="submit"><a href="{% url 'modificarEmpleado' emp.id %}">Modificar</a></button>
+  <button class="nav" type="submit"><a href="{% url 'borrarEmpleado' emp.id %}">Borrar</a></button>
+</div>
+{% endfor %}
+
+{% for cli in lista_clientes %}
+
+<h3 class="detallesCliente">Detalles del Cliente</h3>
+<div class="formulario">
+  <div>
+    <strong>Nombre:</strong> {{ cli.Nombre }}
+    <span id="nombre-cliente"></span>
+  </div>
+  <div>
+    <strong>Teléfono: </strong> {{ cli.Telefono }}
+    <span id="telefono-cliente"></span>
+  </div>
+  <div>
+    <strong>Dirección: </strong> {{ cli.Direccion }}
+    <span id="direccion-cliente"></span>
+  </div>
+  <button class="nav" type="submit"><a href="{% url 'modificarCliente' cli.id %}">Modificar</a></button>
+  <button class="nav" type="submit"><a href="{% url 'borrarCliente' cli.id %}">Borrar</a></button>
+</div>
+{% endfor %}
+
 {% endblock %}
