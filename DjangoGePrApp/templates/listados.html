@@ -5,123 +5,124 @@
   <div class="header">
       <button class="nav"><a href="{% url 'crearProyecto' %}">Crear Proyecto</a></button>
       <button class="nav"><a href="{% url 'crearTareas' %}">Crear Tarea</a></button>
+      <button class="nav"><a href="{% url 'añadirEmpleado' %}">Añadir Empleado</a></button>
+      <button class="nav"><a href="{% url 'añadirCliente' %}">Añadir Cliente</a></button>
   </div>
 </div>
-{% for pro in lista_proyectos %}
 
-<h3 class="detallesProyecto">Detalles del Proyecto</h3>
+<h3 class="detallesProyecto">Listado Proyectos</h3>
 <div class="formulario">
-  <div>
-    <strong>Nombre del Proyecto:</strong> {{ pro.Nombre }}
-    <span id="nombre-proyecto"></span>
-  </div>
-  <div>
-    <strong>Descripción: </strong> {{ pro.Descripcion }}
-    <span id="descripcion-proyecto"></span>
-  </div>
-  <div>
-    <strong>Fecha de Inicio: </strong> {{ pro.Fecha_Inicio }}
-    <span id="fecha-inicio"></span>
-  </div>
-  <div>
-    <strong>Fecha de Fin: </strong> {{ pro.Fecha_Fin }}
-    <span id="fecha-fin"></span>
-  </div>
-  <div>
-    <strong>Presupuesto: </strong> {{ pro.Presupuesto }}
-    <span id="presupuesto"></span>
-  </div>
-  <button class="nav" type="submit"><a href="{% url 'modificarProyecto' pro.id %}">Modificar</a></button>
-  <button class="nav" type="submit"><a href="{% url 'borrarProyecto' pro.id %}">Borrar</a></button>
-  
+  <table>
+    <tr>
+      <th>ID</th>
+      <th>Nombre</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+    {% for pro in lista_proyectos %}
+    <tr>
+      <th>{{ pro.id }}</th>
+      <th>{{ pro.Nombre }}</th>
+      <th>
+        <button class="nav" type="submit"><a href="{% url 'detProyecto' pro.id %}">Ver</a></button> 
+      </th>
+      <th>
+        <button class="nav" type="submit"><a href="{% url 'modificarProyecto' pro.id %}">Modificar</a></button>
+      </th>
+      <th>
+        <button class="nav" type="submit"><a href="{% url 'borrarProyecto' pro.id %}">Borrar</a></button>   
+      </th>
+    </tr>
+    {% endfor %}
+  </table>
 </div>
-{% endfor %}
 
-{% for tar in lista_tareas %}
 
-<h3 class="detallesTarea">Detalles de la Tarea</h3>
+<h3 class="detallesTarea">Listado Tareas</h3>
 <div class="formulario">
-  <div>
-    <strong>Nombre de la Tarea:</strong> {{ tar.Nombre }}
-    <span id="nombre-tarea"></span>
-  </div>
-  <div>
-    <strong>Descripción: </strong> {{ tar.Descripcion }}
-    <span id="descripcion-tarea"></span>
-  </div>
-  <div>
-    <strong>Fecha de Inicio: </strong> {{ tar.Fecha_Inicio }}
-    <span id="fecha-inicio"></span>
-  </div>
-  <div>
-    <strong>Fecha de Fin: </strong> {{ tar.Fecha_Fin }}
-    <span id="fecha-fin"></span>
-  </div>
-  <div>
-    <strong>Nivel de Prioridad: </strong> {{ tar.Nivel_Prioridad }}
-    <span id="nivel_prioridad-tarea"></span>
-  </div>
-  <div>
-    <strong>Estado de la Tarea: </strong> {{ tar.Estado_Tarea }}
-    <span id="estado-tarea"></span>
-  </div>
-  <div>
-    <strong>Notas: </strong> {{ tar.Notas }}
-    <span id="notas-tarea"></span>
-  </div>
-  <button class="nav" type="submit"><a href="{% url 'modificarTarea' tar.id %}">Modificar</a></button>
-  <button class="nav" type="submit"><a href="{% url 'borrarTarea' tar.id %}">Borrar</a></button>
+  <table>
+    <tr>
+      <th>ID</th>
+      <th>Nombre</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+    {% for tar in lista_tareas %}
+    <tr>
+      <th>{{ tar.id }}</th>
+      <th>{{ tar.Nombre }}</th>
+      <th>
+        <button class="nav" type="submit"><a href="{% url 'detTarea' tar.id %}">Ver</a></button> 
+      </th>
+      <th>
+        <button class="nav" type="submit"><a href="{% url 'modificarTarea' tar.id %}">Modificar</a></button>
+      </th>
+      <th>
+        <button class="nav" type="submit"><a href="{% url 'borrarTarea' tar.id %}">Borrar</a></button>   
+      </th>
+    </tr>
+    {% endfor %}  
+  </table>
 </div>
-{% endfor %}
 
-{% for emp in lista_empleados %}
 
-<h3 class="detallesEmpleado">Detalles del Empleado</h3>
+<h3 class="detallesEmpleado">Listado Empleados</h3>
 <div class="formulario">
-  <div>
-    <strong>Nombre:</strong> {{ emp.nombre }}
-    <span id="nombre-empleado"></span>
-  </div>
-  <div>
-    <strong>Apellido: </strong> {{ emp.apellido }}
-    <span id="apellido-empleado"></span>
-  </div>
-  <div>
-    <strong>DNI: </strong> {{ emp.dni }}
-    <span id="dni-empleado"></span>
-  </div>
-  <div>
-    <strong>Teléfono: </strong> {{ emp.telefono }}
-    <span id="telefono-empleado"></span>
-  </div>
-  <div>
-    <strong>Email: </strong> {{ emp.email }}
-    <span id="email-empleado"></span>
-  </div>
-  <button class="nav" type="submit"><a href="{% url 'modificarEmpleado' emp.id %}">Modificar</a></button>
-  <button class="nav" type="submit"><a href="{% url 'borrarEmpleado' emp.id %}">Borrar</a></button>
+  <table>
+    <tr>
+      <th>ID</th>
+      <th>Nombre</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr> 
+    {% for emp in lista_empleados %}
+    <tr>
+      <th>{{ emp.dni }}</th>
+      <th>{{ emp.nombre }}</th>
+      <th>
+        <button class="nav" type="submit"><a href="{% url 'detEmpleado' emp.id %}">Ver</a></button> 
+      </th>
+      <th>
+        <button class="nav" type="submit"><a href="{% url 'modificarEmpleado' emp.id %}">Modificar</a></button>
+      </th>
+      <th>
+        <button class="nav" type="submit"><a href="{% url 'borrarEmpleado' emp.id %}">Borrar</a></button>
+      </th>
+    </tr>
+    {% endfor %}  
+  </table>
 </div>
-{% endfor %}
 
-{% for cli in lista_clientes %}
 
-<h3 class="detallesCliente">Detalles del Cliente</h3>
+<h3 class="detallesCliente">Listado Clientes</h3>
 <div class="formulario">
-  <div>
-    <strong>Nombre:</strong> {{ cli.Nombre }}
-    <span id="nombre-cliente"></span>
-  </div>
-  <div>
-    <strong>Teléfono: </strong> {{ cli.Telefono }}
-    <span id="telefono-cliente"></span>
-  </div>
-  <div>
-    <strong>Dirección: </strong> {{ cli.Direccion }}
-    <span id="direccion-cliente"></span>
-  </div>
-  <button class="nav" type="submit"><a href="{% url 'modificarCliente' cli.id %}">Modificar</a></button>
-  <button class="nav" type="submit"><a href="{% url 'borrarCliente' cli.id %}">Borrar</a></button>
+  <table>
+    <tr>
+      <th>Nombre</th>
+      <th>Teléfono</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr> 
+    {% for cli in lista_clientes %}
+    <tr>
+      <th>{{ cli.Nombre }}</th>
+      <th>{{ cli.Telefono }}</th>
+      <th>
+        <button class="nav" type="submit"><a href="{% url 'detCliente' cli.id %}">Ver</a></button> 
+      </th>
+      <th>
+        <button class="nav" type="submit"><a href="{% url 'modificarCliente' cli.id %}">Modificar</a></button>
+      </th>
+      <th>
+        <button class="nav" type="submit"><a href="{% url 'borrarCliente' cli.id %}">Borrar</a></button>
+      </th>
+    </tr>
+    {% endfor %}  
+  </table>
 </div>
-{% endfor %}
 
 {% endblock %}

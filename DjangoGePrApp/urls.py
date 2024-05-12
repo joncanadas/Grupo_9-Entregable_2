@@ -15,4 +15,8 @@ urlpatterns = [
     path('tarea/delete/<int:tarea_id>/', views.borrarTarea, name='borrarTarea'),
     path('empleado/delete/<int:empleado_id>/', views.borrarEmpleado, name='borrarEmpleado'),
     path('cliente/delete/<int:cliente_id>/', views.borrarCliente, name='borrarCliente'),
+    path('detProyecto/<int:proyecto_id>/', views.detProyecto, name='detProyecto'),
+    path('detTarea/<int:tarea_id>/', views.detTarea, name='detTarea'),
+    path('detEmpleado/<int:empleado_id>/', views.detEmpleado, name='detEmpleado'),
+    path('detCliente/<int:cliente_id>/', views.detCliente, name='detCliente'),
 ]

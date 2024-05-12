@@ -133,3 +133,23 @@ def borrarTarea(request, tarea_id):
     proyecto = Tarea.objects.get(pk=tarea_id)
     proyecto.delete()
     return redirect('listados')
+
+def detProyecto(request, proyecto_id):
+    proyecto = Proyecto.objects.get(pk=proyecto_id)
+    context = {'titulo_pagina' : 'Proyecto Detallado', 'pro' : proyecto}
+    return render(request, 'detProyecto.html', context)
+
+def detTarea(request, tarea_id):
+    tarea = Tarea.objects.get(pk=tarea_id)
+    context = {'titulo_pagina' : 'Tarea Detallada', 'tar' : tarea}
+    return render(request, 'detTarea.html', context)
+
+def detEmpleado(request, empleado_id):
+    empleado = Empleado.objects.get(pk=empleado_id)
+    context = {'titulo_pagina' : 'Empleado Detallado', 'emp' : empleado}
+    return render(request, 'detEmpleado.html', context)
+
+def detCliente(request, cliente_id):
+    cliente = Cliente.objects.get(pk=cliente_id)
+    context = {'titulo_pagina' : 'Cliente Detallado', 'cli' : cliente}
+    return render(request, 'detCliente.html', context)

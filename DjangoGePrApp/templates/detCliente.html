@@ -1,0 +1,21 @@
+{% extends "header.html" %}
+
+{% block contenido %} 
+
+<div class="formulario">
+  <div>
+    <strong>Nombre:</strong> {{ cli.Nombre }}
+    <span id="nombre-cliente"></span>
+  </div>
+  <div>
+    <strong>Teléfono: </strong> {{ cli.Telefono }}
+    <span id="telefono-cliente"></span>
+  </div>
+  <div>
+    <strong>Dirección: </strong> {{ cli.Direccion }}
+    <span id="direccion-cliente"></span>
+  </div>
+  <button class="nav" type="submit"><a href="{% url 'listados' %}">Volver</a></button>
+</div>
+
+{% endblock %}

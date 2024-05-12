@@ -1,0 +1,29 @@
+{% extends "header.html" %}
+
+{% block contenido %} 
+
+<div class="formulario">
+    <div>
+      <strong>Nombre:</strong> {{ pro.Nombre }}
+      <span id="nombre-proyecto"></span>
+    </div>
+    <div>
+      <strong>Descripción: </strong> {{ pro.Descripcion }}
+      <span id="descripcion-proyecto"></span>
+    </div>
+    <div>
+      <strong>Fecha de Inicio: </strong> {{ pro.Fecha_Inicio }}
+      <span id="fecha-inicio"></span>
+    </div>
+    <div>
+      <strong>Fecha de Fin: </strong> {{ pro.Fecha_Fin }}
+      <span id="fecha-fin"></span>
+    </div>
+    <div>
+      <strong>Presupuesto: </strong> {{ pro.Presupuesto }}
+      <span id="presupuesto"></span>
+    </div>
+    <button class="nav" type="submit"><a href="{% url 'listados' %}">Volver</a></button>
+  </div>
+
+{% endblock %}
