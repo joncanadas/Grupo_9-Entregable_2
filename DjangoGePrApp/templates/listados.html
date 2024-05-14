@@ -25,13 +25,13 @@
       <th>{{ pro.id }}</th>
       <th>{{ pro.Nombre }}</th>
       <th>
-        <button class="nav" type="submit"><a href="{% url 'detProyecto' pro.id %}">Ver</a></button> 
+        <button class="btnDet" type="submit"><a href="{% url 'detProyecto' pro.id %}">Ver</a></button> 
       </th>
       <th>
-        <button class="nav" type="submit"><a href="{% url 'modificarProyecto' pro.id %}">Modificar</a></button>
+        <button class="btnModificar" type="submit"><a href="{% url 'modificarProyecto' pro.id %}">Modificar</a></button>
       </th>
       <th>
-        <button class="nav" type="submit"><a href="{% url 'borrarProyecto' pro.id %}">Borrar</a></button>   
+        <button class="borrar" type="submit"><a href="{% url 'borrarProyecto' pro.id %}">borrar</a></button>   
       </th>
     </tr>
     {% endfor %}
@@ -54,13 +54,13 @@
       <th>{{ tar.id }}</th>
       <th>{{ tar.Nombre }}</th>
       <th>
-        <button class="nav" type="submit"><a href="{% url 'detTarea' tar.id %}">Ver</a></button> 
+        <button class="btnDet" type="submit"><a href="{% url 'detTarea' tar.id %}">Ver</a></button> 
       </th>
       <th>
-        <button class="nav" type="submit"><a href="{% url 'modificarTarea' tar.id %}">Modificar</a></button>
+        <button class="btnModificar" type="submit"><a href="{% url 'modificarTarea' tar.id %}">Modificar</a></button>
       </th>
       <th>
-        <button class="nav" type="submit"><a href="{% url 'borrarTarea' tar.id %}">Borrar</a></button>   
+        <button class="btnBorrar" type="submit"><a href="{% url 'borrarTarea' tar.id %}">Borrar</a></button>   
       </th>
     </tr>
     {% endfor %}  
@@ -83,13 +83,13 @@
       <th>{{ emp.dni }}</th>
       <th>{{ emp.nombre }}</th>
       <th>
-        <button class="nav" type="submit"><a href="{% url 'detEmpleado' emp.id %}">Ver</a></button> 
+        <button class="btnDet" type="submit"><a href="{% url 'detEmpleado' emp.id %}">Ver</a></button> 
       </th>
       <th>
-        <button class="nav" type="submit"><a href="{% url 'modificarEmpleado' emp.id %}">Modificar</a></button>
+        <button class="btnModificar" type="submit"><a href="{% url 'modificarEmpleado' emp.id %}">Modificar</a></button>
       </th>
       <th>
-        <button class="nav" type="submit"><a href="{% url 'borrarEmpleado' emp.id %}">Borrar</a></button>
+        <button class="btnBorrar" type="submit"><a href="{% url 'borrarEmpleado' emp.id %}">Borrar</a></button>
       </th>
     </tr>
     {% endfor %}  
@@ -112,13 +112,13 @@
       <th>{{ cli.Nombre }}</th>
       <th>{{ cli.Telefono }}</th>
       <th>
-        <button class="nav" type="submit"><a href="{% url 'detCliente' cli.id %}">Ver</a></button> 
+        <button class="btnDet" type="submit"><a href="{% url 'detCliente' cli.id %}">Ver</a></button> 
       </th>
       <th>
-        <button class="nav" type="submit"><a href="{% url 'modificarCliente' cli.id %}">Modificar</a></button>
+        <button class="btnModificar" type="submit"><a href="{% url 'modificarCliente' cli.id %}">Modificar</a></button>
       </th>
       <th>
-        <button class="nav" type="submit"><a href="{% url 'borrarCliente' cli.id %}">Borrar</a></button>
+        <button class="btnBorrar" type="submit"><a href="{% url 'borrarCliente' cli.id %}">Borrar</a></button>
       </th>
     </tr>
     {% endfor %}  

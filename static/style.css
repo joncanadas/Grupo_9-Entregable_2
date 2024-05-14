@@ -153,6 +153,18 @@ button[type="submit"] a {
   color: white;
 }
 
+.btnDet {
+  background-color: rgb(0, 162, 255);
+}
+
+.btnModificar {
+  background-color: rgb(226, 226, 84);
+}
+
+.btnBorrar {
+  background-color: rgb(241, 64, 64);
+}
+
 /*Proyecto*/
 
 .detallesProyecto {
