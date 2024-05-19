@@ -1,15 +1,38 @@
 /*Globales*/
-
-.html {
-  box-sizing: border-box;
-  font-family: "Inconsolata", sans-serif;
+@font-face {
+  font-family: Poppins-Regular;
+  src: url('fuentes/poppins/Poppins-Regular.ttf'); 
 }
 
-.body {
+@font-face {
+  font-family: Poppins-Medium;
+  src: url('fuentes/poppins/Poppins-Medium.ttf'); 
+}
+
+@font-face {
+  font-family: Poppins-Bold;
+  src: url('fuentes/poppins/Poppins-Bold.ttf'); 
+}
+
+@font-face {
+  font-family: Poppins-SemiBold;
+  src: url('fuentes/poppins/Poppins-SemiBold.ttf'); 
+}
+
+body, html {
+	height: 100%;
+	font-family: Poppins-Regular, sans-serif;
+  box-sizing: border-box;
   margin: 0;
   padding: 0;
   background-color: white;
 }
+*{
+	margin: 0px; 
+	padding: 0px; 
+	box-sizing: border-box;
+}
+
 body {
   margin: 0;
   padding: 0;
@@ -147,22 +170,27 @@ a {
 
 .formulario button[type="submit"]:hover {
   background-color: #45a049;
+  cursor: pointer;
 }
 
 button[type="submit"] a {
   color: white;
+  cursor: pointer;
 }
 
 .btnDet {
   background-color: rgb(0, 162, 255);
+  cursor: pointer;
 }
 
 .btnModificar {
   background-color: rgb(226, 226, 84);
+  cursor: pointer;
 }
 
 .btnBorrar {
   background-color: rgb(241, 64, 64);
+  cursor: pointer;
 }
 
 /*Proyecto*/
