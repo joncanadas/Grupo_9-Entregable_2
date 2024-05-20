@@ -1,75 +1,73 @@
-/*Globales*/
-@font-face {
-  font-family: Poppins-Regular;
-  src: url('fuentes/poppins/Poppins-Regular.ttf'); 
-}
-
-@font-face {
-  font-family: Poppins-Medium;
-  src: url('fuentes/poppins/Poppins-Medium.ttf'); 
-}
-
-@font-face {
-  font-family: Poppins-Bold;
-  src: url('fuentes/poppins/Poppins-Bold.ttf'); 
-}
-
-@font-face {
-  font-family: Poppins-SemiBold;
-  src: url('fuentes/poppins/Poppins-SemiBold.ttf'); 
+:root {
+  --primary-color: #c7a17a;
+  --background-color: #f9f5f0;
+  --dark-color: #151515;
+  --accent-color: #efa162;
+  --form-background: #5cb85c; /* Verde complementario */
+  --form-hover: #4cae4c;
+  --btn-blue: rgb(0, 162, 255);
+  --btn-yellow: rgb(226, 226, 84);
+  --btn-red: rgb(241, 64, 64);
 }
 
 body, html {
-	height: 100%;
-	font-family: Poppins-Regular, sans-serif;
+  height: 100%;
+  font-family: 'Poppins', sans-serif;
+  font-size: 62.5%;
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-  background-color: white;
-}
-*{
-	margin: 0px; 
-	padding: 0px; 
-	box-sizing: border-box;
+  background-color: var(--background-color);
 }
 
-body {
+* {
   margin: 0;
   padding: 0;
-  font-family: "Inconsolata", sans-serif;
+  box-sizing: border-box;
+}
+
+h1, h2, h3 {
+  text-align: center;
+  margin-bottom: 20px;
 }
 
 h1, h2 {
-  text-align: center;
-  background-color:rgb(255, 255, 255);
-  border-top: 1px solid black;
+  background-color: #fff;
+  border-top: 1px solid var(--dark-color);
+}
+
+h3 {
+  color: var(--accent-color);
+  background-color: var(--dark-color);
 }
 
 a {
   text-decoration: none;
 }
 
+input, button {
+  outline: none;
+  border: none;
+}
+
 .tituloIndex {
-  color: #efa162;
+  color: var(--primary-color);
   margin-bottom: 80px;
-  text-align: center;
   background-color: white;
   border-top: 3px solid white;
-  font-size: 40px;
-  margin: 0; 
+  font-size: 4rem;
 }
 
-.header {
+.header, .header0 {
   text-align: center;
   padding: 10px;
 }
 
-.header0{
+.header0 {
   text-align: left;
-  padding: 10px;
 }
 
-.header0 img{
+.header0 img {
   max-height: 90px;
 }
 
@@ -87,7 +85,7 @@ a {
 
 .contenedor {
   width: 100%;
-  background-color: #f2f2f2;
+  background-color: var(--background-color);
 }
 
 .logo {
@@ -100,41 +98,38 @@ a {
   height: auto;
 }
 
-.nav a {
-  text-decoration: none;
-  color: #efa162;
-  font-weight: bold;
-}
-
-.nav a:hover {
-  color: #efa162;
-}
-
 .nav {
-  background-color: #f2f2f2;
+  background-color: var(--background-color);
   padding: 10px;
   display: inline-block;
   margin-right: 20px;
-  color: #efa162;
   font-weight: bold;
-  text-decoration: none;
   border: none;
   cursor: pointer;
 }
 
-.formulario {
+.nav a {
+  color: var(--primary-color);
+  font-weight: bold;
+}
+
+.nav a:hover {
+  color: var(--dark-color);
+}
+
+.formulario, .detallesProyecto, .detallesTarea, .detallesEmpleado, .detallesCliente {
   margin: 20px auto;
   padding: 20px;
-  border: 1px solid #000000;
-  background-color: #efa162;
+  border: 1px solid var(--dark-color);
+  background-color: var(--primary-color);
   border-radius: 5px;
   width: 80%;
   text-align: center;
   color: white;
-  font-size: 20px;
+  font-size: 2rem;
 }
 
-.formulario div {
+.formulario div, .detallesProyecto div, .detallesTarea div, .detallesEmpleado div, .detallesCliente div {
   margin-bottom: 10px;
 }
 
@@ -151,26 +146,21 @@ a {
 .formulario select {
   width: 100%;
   padding: 8px;
-  margin-top: 6px;
-  margin-bottom: 16px;
-  display: inline-block;
+  margin: 6px 0 16px;
   border: 1px solid #ccc;
   border-radius: 4px;
-  box-sizing: border-box;
 }
 
-.formulario button[type="submit"] {
-  background-color: #4CAF50;
+button[type="submit"] {
+  background-color: var(--form-background);
   color: white;
-  padding: 12px 20px;
-  border: none;
+  padding: 1rem 2rem;
   border-radius: 4px;
   cursor: pointer;
 }
 
-.formulario button[type="submit"]:hover {
-  background-color: #45a049;
-  cursor: pointer;
+button[type="submit"]:hover {
+  background-color: var(--form-hover);
 }
 
 button[type="submit"] a {
@@ -179,48 +169,27 @@ button[type="submit"] a {
 }
 
 .btnDet {
-  background-color: rgb(0, 162, 255);
-  cursor: pointer;
+  background-color: var(--btn-blue);
 }
 
 .btnModificar {
-  background-color: rgb(226, 226, 84);
-  cursor: pointer;
+  background-color: var(--btn-yellow);
 }
 
 .btnBorrar {
-  background-color: rgb(241, 64, 64);
-  cursor: pointer;
+  background-color: var(--btn-red);
 }
 
-/*Proyecto*/
-
-.detallesProyecto {
-  margin: 20px auto;
-  padding: 20px;
-  border: 1px solid #000000;
-  background-color: #efa162;
-  border-radius: 5px;
-  width: 80%;
-  text-align: center;
-  color: white;
-  font-size: 30px;
+.detallesProyecto h3, .detallesTarea h3, .detallesEmpleado h3, .detallesCliente h3 {
+  color: var(--accent-color);
+  background-color: var(--dark-color);
 }
 
-.detallesProyecto h3 {
-  color: #efa162; 
-  background-color: rgb(2, 2, 2) ;
-}
-
-.detallesProyecto div {
-  margin-bottom: 10px;
-}
-
-.detallesProyecto strong {
+.detallesProyecto strong, .detallesTarea strong, .detallesEmpleado strong, .detallesCliente strong {
   font-weight: bold;
 }
 
-.detallesProyecto span {
+.detallesProyecto span, .detallesTarea span, .detallesEmpleado span, .detallesCliente span {
   margin-left: 10px;
   color: #666;
 }
@@ -228,120 +197,11 @@ button[type="submit"] a {
 .detallesProyectoindex {
   margin: 20px auto;
   padding: 20px;
-  border: 1px solid #ffffff;
-  background-color: #efa162;
+  border: 1px solid #fff;
+  background-color: var(--accent-color);
   border-radius: 5px;
   width: 80%;
   text-align: center;
   color: white;
-  font-size: 20px;
-}
-
-.submitProyecto[type="submit"] {
-  background-color: #4CAF50;
-  color: white;
-  padding: 12px 20px;
-  border: none;
-  border-radius: 4px;
-  cursor: pointer;
-}
-
-.detallesProyecto button[type="submit"]:hover {
-  background-color: #45a049;
-} 
-
-/*Tarea*/
-
-.detallesTarea {
-  margin: 20px auto;
-  padding: 20px;
-  border: 1px solid #000000;
-  background-color: #efa162;
-  border-radius: 5px;
-  width: 80%;
-  text-align: center;
-  color: white;
-  font-size: 30px;
-}
-
-.detallesTarea h3 {
-  color: #efa162; 
-  background-color: rgb(2, 2, 2) ;
-}
-
-.detallesTarea div {
-  margin-bottom: 10px;
-}
-
-.detallesTarea strong {
-  font-weight: bold;
-}
-
-.detallesTarea span {
-  margin-left: 10px;
-  color: #666;
-}
-
-/*Empleado*/
-
-.detallesEmpleado {
-  margin: 20px auto;
-  padding: 20px;
-  border: 1px solid #000000;
-  background-color: #efa162;
-  border-radius: 5px;
-  width: 80%;
-  text-align: center;
-  color: white;
-  font-size: 30px;
-}
-
-.detallesEmpleado h3 {
-  color: #efa162; 
-  background-color: rgb(2, 2, 2) ;
-}
-
-.detallesEmpleado div {
-  margin-bottom: 10px;
-}
-
-.detallesEmpleado strong {
-  font-weight: bold;
-}
-
-.detallesEmpleado span {
-  margin-left: 10px;
-  color: #666;
-}
-
-/*Cliente*/
-
-.detallesCliente {
-  margin: 20px auto;
-  padding: 20px;
-  border: 1px solid #000000;
-  background-color: #efa162;
-  border-radius: 5px;
-  width: 80%;
-  text-align: center;
-  color: white;
-  font-size: 30px;
-}
-
-.detallesCliente h3 {
-  color: #efa162; 
-  background-color: rgb(2, 2, 2) ;
-}
-
-.detallesCliente div {
-  margin-bottom: 10px;
-}
-
-.detallesCliente strong {
-  font-weight: bold;
-}
-
-.detallesCliente span {
-  margin-left: 10px;
-  color: #666;
+  font-size: 2rem;
 }
