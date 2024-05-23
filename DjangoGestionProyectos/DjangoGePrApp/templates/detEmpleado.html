@@ -1,0 +1,29 @@
+{% extends "header.html" %}
+
+{% block contenido %} 
+
+<div class="formulario">
+  <div>
+    <strong>Nombre:</strong> {{ emp.nombre }}
+    <span id="nombre-empleado"></span>
+  </div>
+  <div>
+    <strong>Apellido: </strong> {{ emp.apellido }}
+    <span id="apellido-empleado"></span>
+  </div>
+  <div>
+    <strong>DNI: </strong> {{ emp.dni }}
+    <span id="dni-empleado"></span>
+  </div>
+  <div>
+    <strong>Teléfono: </strong> {{ emp.telefono }}
+    <span id="telefono-empleado"></span>
+  </div>
+  <div>
+    <strong>Email: </strong> {{ emp.email }}
+    <span id="email-empleado"></span>
+  </div>
+  <button class="nav" type="submit"><a href="{% url 'listados' %}">Volver</a></button>
+</div>
+
+{% endblock %}

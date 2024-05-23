@@ -1,0 +1,14 @@
+{% extends "header.html" %}
+
+{% block contenido %} 
+
+<!-- Formulario -->
+<form class="formulario" action="#" method="POST">
+    {% csrf_token %}
+    {{form}}
+
+    <button type="submit">Añadir Empleado</button>
+    <button class="nav" type="submit"><a href="{% url 'listados' %}">Volver</a></button>
+</form>
+
+{% endblock %}
