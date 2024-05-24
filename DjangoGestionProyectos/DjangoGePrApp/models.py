@@ -1,7 +1,5 @@
 from django.db import models
 
-# Create your models here.
-
 class Cliente(models.Model):
     nombre = models.CharField(max_length=100)
     telefono = models.CharField(max_length=20)
@@ -41,18 +39,9 @@ class Tarea(models.Model):
     estado = models.CharField(max_length=50)
     proyecto = models.ForeignKey(Proyecto, on_delete=models.CASCADE, related_name='tareas')
     responsable = models.ForeignKey(Empleado, on_delete=models.SET_NULL, null=True, related_name='tareas_responsables')
-    empleados = models.ManyToManyField(Empleado, through='Participacion', related_name='tareas')
 
     def __str__(self):
         return self.nombre
-
-class Participacion(models.Model):
-    tarea = models.ForeignKey(Tarea, on_delete=models.CASCADE)
-    empleado = models.ForeignKey(Empleado, on_delete=models.CASCADE)
-    fecha_participacion = models.DateField(auto_now_add=True)
-
-    def __str__(self):
-        return f'{self.empleado} en {self.tarea}'
 
 class Nota(models.Model):
     contenido = models.TextField()
