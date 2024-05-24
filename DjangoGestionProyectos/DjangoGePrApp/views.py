@@ -2,7 +2,7 @@ from django.http import HttpResponse
 from django.shortcuts import redirect
 from django.shortcuts import render
 from .forms import ProyectoForm
-from .models import Proyecto, Tarea, Cliente, Empleado
+from .models import Proyecto, Tarea, Cliente, Empleado, Nota
 from .forms import ProyectoForm, TareaForm, ClienteForm, EmpleadoForm
 
 # Create your views here.
@@ -141,7 +141,8 @@ def detProyecto(request, proyecto_id):
 
 def detTarea(request, tarea_id):
     tarea = Tarea.objects.get(pk=tarea_id)
-    context = {'titulo_pagina' : 'Tarea Detallada', 'tar' : tarea}
+    notas = Nota.objects.filter(tarea=tarea)
+    context = {'titulo_pagina' : 'Tarea Detallada', 'tar' : tarea, 'notas' : notas}
     return render(request, 'detTarea.html', context)
 
 def detEmpleado(request, empleado_id):

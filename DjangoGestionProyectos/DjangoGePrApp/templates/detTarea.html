@@ -35,6 +35,18 @@
     <strong>Responsable: </strong> {{ tar.responsable }}
     <span id="responsable-tarea"></span>
   </div>
+  <div>
+    <strong>Notas: </strong>
+    <ul>
+      {% for nota in notas %}
+        <li>
+          {{ nota.autor }} - {{ nota.contenido }}  ({{ nota.fecha }})
+        </li>
+      {% empty %}
+        <li>No hay notas para esta tarea.</li>
+      {% endfor %}
+    </ul>
+  </div>
   <button class="nav" type="submit"><a href="{% url 'listados' %}">Volver</a></button>
 </div>
 

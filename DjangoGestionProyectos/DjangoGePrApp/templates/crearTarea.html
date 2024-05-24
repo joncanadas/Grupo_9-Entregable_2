@@ -7,6 +7,9 @@
     {% csrf_token %}
     {{form}}
 
+    <label for="nota">Nota:</label>
+    <input type="text" id="nota" name="nota">
+
     <button type="submit">Crear Tarea</button>
     <button class="nav" type="submit"><a href="{% url 'listados' %}">Volver</a></button>
 </form>
