@@ -4,32 +4,36 @@
 
 <div class="formulario">
   <div>
-    <strong>Nombre:</strong> {{ tar.Nombre }}
+    <strong>Nombre:</strong> {{ tar.nombre }}
     <span id="nombre-tarea"></span>
   </div>
   <div>
-    <strong>Descripción: </strong> {{ tar.Descripcion }}
+    <strong>Descripción: </strong> {{ tar.descripcion }}
     <span id="descripcion-tarea"></span>
   </div>
   <div>
-    <strong>Fecha de Inicio: </strong> {{ tar.Fecha_Inicio }}
+    <strong>Fecha de Inicio: </strong> {{ tar.fecha_inicio }}
     <span id="fecha-inicio"></span>
   </div>
   <div>
-    <strong>Fecha de Fin: </strong> {{ tar.Fecha_Fin }}
+    <strong>Fecha de Fin: </strong> {{ tar.fecha_fin }}
     <span id="fecha-fin"></span>
   </div>
   <div>
-    <strong>Nivel de Prioridad: </strong> {{ tar.Nivel_Prioridad }}
+    <strong>Nivel de Prioridad: </strong> {{ tar.nivel_prioridad }}
     <span id="nivel_prioridad-tarea"></span>
   </div>
   <div>
-    <strong>Estado de la Tarea: </strong> {{ tar.Estado_Tarea }}
+    <strong>Estado de la Tarea: </strong> {{ tar.estado_tarea }}
     <span id="estado-tarea"></span>
   </div>
   <div>
-    <strong>Notas: </strong> {{ tar.Notas }}
-    <span id="notas-tarea"></span>
+    <strong>Proyecto: </strong> {{ tar.proyecto }}
+    <span id="proyecto-tarea"></span>
+  </div>
+  <div>
+    <strong>Responsable: </strong> {{ tar.responsable }}
+    <span id="responsable-tarea"></span>
   </div>
   <button class="nav" type="submit"><a href="{% url 'listados' %}">Volver</a></button>
 </div>

@@ -4,24 +4,28 @@
 
 <div class="formulario">
     <div>
-      <strong>Nombre:</strong> {{ pro.Nombre }}
+      <strong>Nombre:</strong> {{ pro.nombre }}
       <span id="nombre-proyecto"></span>
     </div>
     <div>
-      <strong>Descripción: </strong> {{ pro.Descripcion }}
+      <strong>Descripción: </strong> {{ pro.descripcion }}
       <span id="descripcion-proyecto"></span>
     </div>
     <div>
-      <strong>Fecha de Inicio: </strong> {{ pro.Fecha_Inicio }}
+      <strong>Fecha de Inicio: </strong> {{ pro.fecha_inicio }}
       <span id="fecha-inicio"></span>
     </div>
     <div>
-      <strong>Fecha de Fin: </strong> {{ pro.Fecha_Fin }}
+      <strong>Fecha de Fin: </strong> {{ pro.fecha_fin }}
       <span id="fecha-fin"></span>
     </div>
     <div>
-      <strong>Presupuesto: </strong> {{ pro.Presupuesto }}
+      <strong>Presupuesto: </strong> {{ pro.presupuesto }}€
       <span id="presupuesto"></span>
+    </div>
+    <div>
+      <strong>Cliente: </strong> {{ pro.cliente }}
+      <span id="cliente"></span>
     </div>
     <button class="nav" type="submit"><a href="{% url 'listados' %}">Volver</a></button>
   </div>

@@ -23,7 +23,7 @@
     {% for pro in lista_proyectos %}
     <tr>
       <th>{{ pro.id }}</th>
-      <th>{{ pro.Nombre }}</th>
+      <th>{{ pro.nombre }}</th>
       <th>
         <button class="btnDet" type="submit"><a href="{% url 'detProyecto' pro.id %}">Ver</a></button> 
       </th>
@@ -52,7 +52,7 @@
     {% for tar in lista_tareas %}
     <tr>
       <th>{{ tar.id }}</th>
-      <th>{{ tar.Nombre }}</th>
+      <th>{{ tar.nombre }}</th>
       <th>
         <button class="btnDet" type="submit"><a href="{% url 'detTarea' tar.id %}">Ver</a></button> 
       </th>
@@ -72,7 +72,7 @@
 <div class="formulario">
   <table>
     <tr>
-      <th>ID</th>
+      <th>DNI</th>
       <th>Nombre</th>
       <th></th>
       <th></th>
@@ -109,8 +109,8 @@
     </tr> 
     {% for cli in lista_clientes %}
     <tr>
-      <th>{{ cli.Nombre }}</th>
-      <th>{{ cli.Telefono }}</th>
+      <th>{{ cli.nombre }}</th>
+      <th>{{ cli.telefono }}</th>
       <th>
         <button class="btnDet" type="submit"><a href="{% url 'detCliente' cli.id %}">Ver</a></button> 
       </th>
