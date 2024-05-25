@@ -54,6 +54,15 @@ input, button {
   border: none;
 }
 
+#id_fecha_inicio, #id_fecha_fin {
+  width: 100%;
+  height: 30px;
+  padding: 5px;
+  margin: 5px 0;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
 .tituloIndex {
   color: var(--primary-color);
   margin-bottom: 80px;

@@ -3,7 +3,7 @@ from django.shortcuts import redirect
 from django.shortcuts import render
 from .forms import ProyectoForm
 from .models import Proyecto, Tarea, Cliente, Empleado, Nota
-from .forms import ProyectoForm, TareaForm, ClienteForm, EmpleadoForm
+from .forms import ProyectoForm, TareaForm, ClienteForm, EmpleadoForm, NotaForm
 
 # Create your views here.
 def listados(request):
@@ -37,6 +37,17 @@ def añadirEmpleado(request):
     
     context = {'titulo_pagina' : 'Añadir Empleados', 'form': form}
     return render(request, 'crearEmpleado.html', context)
+
+def añadirNota(request):
+    form = NotaForm()
+    if request.method == 'POST':
+        form = NotaForm(request.POST)
+        if form.is_valid():
+            form.save()
+            return redirect('listados')
+    
+    context = {'titulo_pagina' : 'Añadir Nota', 'form': form}
+    return render(request, 'crearNotas.html', context)
 
 def crearProyecto(request):
     form = ProyectoForm()

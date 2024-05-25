@@ -1,6 +1,6 @@
 from django import forms
 from django.forms import ModelForm
-from .models import Proyecto, Tarea, Empleado, Cliente
+from .models import Proyecto, Tarea, Empleado, Cliente, Nota
 
 class ProyectoForm(ModelForm):
     class Meta:
@@ -20,6 +20,11 @@ class TareaForm(ModelForm):
             'fecha_fin': forms.DateInput(attrs={'type': 'date'}),
         }
         
+class NotaForm(ModelForm):
+    class Meta:
+        model = Nota
+        fields = '__all__'        
+
 class EmpleadoForm(ModelForm):
     class Meta:
         model = Empleado
