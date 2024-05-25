@@ -39,3 +39,7 @@ class ClienteForm(ModelForm):
     class Meta:
         model = Cliente
         fields = "__all__"
+
+
+class EmailForm(forms.Form):
+    email = forms.EmailField(label='Tu correo electrónico', max_length=100)

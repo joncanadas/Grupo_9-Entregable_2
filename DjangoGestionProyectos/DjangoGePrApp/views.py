@@ -1,9 +1,10 @@
 from django.http import HttpResponse
 from django.shortcuts import redirect
 from django.shortcuts import render
+from django.core.mail import send_mail
 from .forms import ProyectoForm
 from .models import Proyecto, Tarea, Cliente, Empleado, Nota
-from .forms import ProyectoForm, TareaForm, ClienteForm, EmpleadoForm, NotaForm
+from .forms import ProyectoForm, TareaForm, ClienteForm, EmpleadoForm, NotaForm, EmailForm
 
 
 # Create your views here.
@@ -185,3 +186,54 @@ def detCliente(request, cliente_id):
     cliente = Cliente.objects.get(pk=cliente_id)
     context = {"titulo_pagina": "Cliente Detallado", "cli": cliente}
     return render(request, "detCliente.html", context)
+
+def enviarCorreo(request):
+    if request.method == 'POST':
+        form = EmailForm(request.POST)
+        if form.is_valid():
+            email = form.cleaned_data['email']
+            subject = 'Información sobre Deustronic Components S.L.'
+            message = (
+                'Estimado/a,\n\n'
+                'Nos complace informarle sobre Deustronic Components S.L., una compañía líder en la gestión de proyectos industriales. '
+                'Nuestro compromiso es proporcionar soluciones innovadoras y eficientes que satisfagan las necesidades específicas '
+                'de nuestros clientes en el sector industrial.\n\n'
+                '¿Quiénes somos?\n\n'
+                'Deustronic Components S.L. se especializa en la planificación, ejecución y supervisión de proyectos industriales de diversa '
+                'envergadura. Contamos con un equipo de profesionales altamente cualificados y con amplia experiencia en el sector, lo que '
+                'nos permite ofrecer servicios de calidad y garantizar el éxito de cada proyecto.\n\n'
+                'Nuestros Servicios\n\n'
+                'Entre los servicios que ofrecemos se encuentran:\n'
+                '- Consultoría y planificación de proyectos: Asesoramiento experto para la definición y organización de sus proyectos industriales.\n'
+                '- Ingeniería y diseño: Desarrollo de soluciones técnicas personalizadas que cumplen con los más altos estándares de calidad y eficiencia.\n'
+                '- Gestión de la construcción: Supervisión integral de la ejecución de obras, asegurando el cumplimiento de plazos y presupuestos.\n'
+                '- Mantenimiento y soporte: Servicios de mantenimiento preventivo y correctivo para asegurar la operatividad continua de sus instalaciones.\n\n'
+                'Nuestro Compromiso\n\n'
+                'En Deustronic Components S.L., nos comprometemos a:\n'
+                '- Brindar soluciones personalizadas que se adapten a las necesidades específicas de cada cliente.\n'
+                '- Utilizar tecnologías de vanguardia y prácticas sostenibles en todos nuestros proyectos.\n'
+                '- Garantizar la seguridad y el bienestar de nuestro equipo y de todas las partes involucradas en nuestros proyectos.\n\n'
+                'Contáctenos\n\n'
+                'Si desea obtener más información sobre nuestros servicios o tiene alguna consulta, no dude en ponerse en contacto con nosotros. '
+                'Puede responder a este correo electrónico o llamarnos al 674231938.'
+                'para conocer más sobre nuestro trabajo.\n\n'
+                'Agradecemos su interés en Deustronic Components S.L. y esperamos poder colaborar con usted en futuros proyectos.\n\n'
+                'Atentamente,\n\n'
+                'Mikel García García\n'
+                'Desarrollador SW\n'
+                'Deustronic Components S.L.\n'
+                'grupo9ingweb@gmail.com\n'
+                '674231938\n'      
+            )
+            send_mail(
+                subject,
+                message,
+                'tucorreo@gmail.com',  # Reemplaza con tu correo
+                [email],
+                fail_silently=False,
+            )
+            return render(request, 'correoEnviado.html')
+    else:
+        form = EmailForm()
+
+    return render(request, 'enviarCorreo.html', {'form': form})

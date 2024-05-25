@@ -20,4 +20,5 @@ urlpatterns = [
     path('detTarea/<int:tarea_id>/', views.detTarea, name='detTarea'),
     path('detEmpleado/<int:empleado_id>/', views.detEmpleado, name='detEmpleado'),
     path('detCliente/<int:cliente_id>/', views.detCliente, name='detCliente'),
+    path('enviarCorreo/', views.enviarCorreo, name='enviarCorreo'),
 ]

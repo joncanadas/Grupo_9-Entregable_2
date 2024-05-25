@@ -21,6 +21,12 @@
         <h1 class="tituloIndex">Gestión de Proyectos - Deustotil Tech S.L.</h1>
       </div>
     </nav>
+    <div>
+      <a href="{% url 'listados' %}">Listado</a>
+    </div>
+    <div>
+      <a href="{% url 'enviarCorreo' %}">Recibir Información</a>
+    </div>
     <h2>{{ titulo_pagina }}</h2>
 
     {% block contenido %} {% endblock %}
