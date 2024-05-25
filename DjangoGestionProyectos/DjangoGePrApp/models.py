@@ -1,4 +1,5 @@
 from django.db import models
+from django.core.validators import MaxValueValidator, MinValueValidator
 
 class Cliente(models.Model):
     nombre = models.CharField(max_length=100)
@@ -35,7 +36,7 @@ class Tarea(models.Model):
     descripcion = models.TextField()
     fecha_inicio = models.DateField()
     fecha_fin = models.DateField()
-    nivel_prioridad = models.IntegerField()
+    nivel_prioridad = models.IntegerField(validators=[MinValueValidator(1), MaxValueValidator(3)])
     estado = models.CharField(max_length=50)
     proyecto = models.ForeignKey(Proyecto, on_delete=models.CASCADE, related_name='tareas')
     responsable = models.ForeignKey(Empleado, on_delete=models.SET_NULL, null=True, related_name='tareas_responsables')
