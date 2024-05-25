@@ -27,8 +27,15 @@
     <div>
       <a href="{% url 'enviarCorreo' %}">Recibir Información</a>
     </div>
+    <h1>Bienvenido a [Nombre de tu Empresa]</h1>
+    <button id="expand-button">Expandir información</button>
+    <div id="info-block">
+        <p>Aquí está la información adicional sobre nuestra empresa...</p>
+    </div>
     <h2>{{ titulo_pagina }}</h2>
 
     {% block contenido %} {% endblock %}
+
+    <script src="{% static 'expandirInfo.js' %}"></script>
   </body>
 </html>
