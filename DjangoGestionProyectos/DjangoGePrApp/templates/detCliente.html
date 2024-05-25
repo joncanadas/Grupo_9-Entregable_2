@@ -1,6 +1,4 @@
-{% extends "header.html" %}
-
-{% block contenido %} 
+{% extends "header.html" %} {% block contenido %}
 
 <div class="formulario">
   <div>
@@ -15,7 +13,9 @@
     <strong>Dirección: </strong> {{ cli.direccion }}
     <span id="direccion-cliente"></span>
   </div>
-  <button class="nav" type="submit"><a href="{% url 'listados' %}">Volver</a></button>
+  <button class="nav" type="submit">
+    <a href="{% url 'listados' %}">Volver</a>
+  </button>
 </div>
 
 {% endblock %}

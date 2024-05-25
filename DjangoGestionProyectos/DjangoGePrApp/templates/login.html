@@ -1,22 +1,19 @@
-{% extends "header.html" %}
-
-{% block contenido %} 
+{% extends "header.html" %} {% block contenido %}
 
 <!-- LOGIN -->
 <form class="formulariologin" action="#" method="POST">
-    {% csrf_token %}
-    <div class="formulario">
-    	 <div>
-	      <input type="text" name="username" id="" placeholder="Nombre">
-    	 </div> 
-    	 <div>
-	      <input type="password" name="password" id="" placeholder="Contraseña">
-    	 </div>
-    	 <div>
-	      <button type="submit">Iniciar Sesión</button>
-    	 </div>
+  {% csrf_token %}
+  <div class="formulario">
+    <div>
+      <input type="text" name="username" id="" placeholder="Nombre" />
     </div>
-
+    <div>
+      <input type="password" name="password" id="" placeholder="Contraseña" />
+    </div>
+    <div>
+      <button type="submit">Iniciar Sesión</button>
+    </div>
+  </div>
 </form>
 
 {% endblock %}

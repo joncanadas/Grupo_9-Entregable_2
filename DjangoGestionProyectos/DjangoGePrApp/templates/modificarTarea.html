@@ -1,13 +1,10 @@
-{% extends "header.html" %}
-
-{% block contenido %} 
+{% extends "header.html" %} {% block contenido %}
 
 <!-- Formulario -->
 <form class="formulario" action="#" method="POST">
-{% csrf_token %}
-{{ form }}
+  {% csrf_token %} {{ form }}
 
-<button type="submit">Guardar Cambios</button>
+  <button type="submit">Guardar Cambios</button>
 </form>
 
 {% endblock %}
