@@ -13,11 +13,4 @@ document.addEventListener("DOMContentLoaded", function () {
         this.textContent = "Expandir información"; // Cambiar el texto del botón
       }
     });
-
-  // Capturar el evento de clic en el botón para mostrar alerta
-  document
-    .getElementById("alert-button")
-    .addEventListener("click", function () {
-      alert("Esta es una alerta de prueba.");
-    });
 });
