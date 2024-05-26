@@ -21,4 +21,7 @@ urlpatterns = [
     path('detEmpleado/<int:empleado_id>/', views.detEmpleado, name='detEmpleado'),
     path('detCliente/<int:cliente_id>/', views.detCliente, name='detCliente'),
     path('enviarCorreo/', views.enviarCorreo, name='enviarCorreo'),
+    path('login/', views.login, name='login'),
+    path('registro/', views.registro, name='registro'),
+    path('logout/', views.logout, name='logout'),
 ]

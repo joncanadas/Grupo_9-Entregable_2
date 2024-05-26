@@ -2,12 +2,16 @@ from django.http import HttpResponse
 from django.shortcuts import redirect
 from django.shortcuts import render
 from django.core.mail import send_mail
+from django.contrib.auth.decorators import login_required
+from django.contrib.auth.models import auth
+from django.contrib.auth import authenticate, login, logout
 from .forms import ProyectoForm
 from .models import Proyecto, Tarea, Cliente, Empleado, Nota
-from .forms import ProyectoForm, TareaForm, ClienteForm, EmpleadoForm, NotaForm, EmailForm
+from .forms import ProyectoForm, TareaForm, ClienteForm, EmpleadoForm, NotaForm, EmailForm, CreateUserForm, LoginForm
 
 
 # Create your views here.
+@login_required(login_url="login")
 def listados(request):
     proyectos = Proyecto.objects.all
     tareas = Tarea.objects.all
@@ -22,7 +26,7 @@ def listados(request):
     }
     return render(request, "listados.html", context)
 
-
+@login_required(login_url="login")
 def añadirCliente(request):
     form = ClienteForm()
     if request.method == "POST":
@@ -34,7 +38,7 @@ def añadirCliente(request):
     context = {"titulo_pagina": "Añadir Cliente", "form": form}
     return render(request, "crearCliente.html", context)
 
-
+@login_required(login_url="login")
 def añadirEmpleado(request):
     form = EmpleadoForm()
     if request.method == "POST":
@@ -46,7 +50,7 @@ def añadirEmpleado(request):
     context = {"titulo_pagina": "Añadir Empleados", "form": form}
     return render(request, "crearEmpleado.html", context)
 
-
+@login_required(login_url="login")
 def añadirNota(request):
     form = NotaForm()
     if request.method == "POST":
@@ -58,7 +62,7 @@ def añadirNota(request):
     context = {"titulo_pagina": "Añadir Nota", "form": form}
     return render(request, "crearNotas.html", context)
 
-
+@login_required(login_url="login")
 def crearProyecto(request):
     form = ProyectoForm()
     if request.method == "POST":
@@ -70,7 +74,7 @@ def crearProyecto(request):
     context = {"titulo_pagina": "Crear Proyecto", "form": form}
     return render(request, "crearProyecto.html", context)
 
-
+@login_required(login_url="login")
 def crearTarea(request):
     form = TareaForm()
     if request.method == "POST":
@@ -82,7 +86,7 @@ def crearTarea(request):
     context = {"titulo_pagina": "Crear Tarea", "form": form}
     return render(request, "crearTarea.html", context)
 
-
+@login_required(login_url="login")
 def modificarCliente(request, cliente_id):
     cliente = Cliente.objects.get(pk=cliente_id)
     form = ClienteForm(instance=cliente)
@@ -96,7 +100,7 @@ def modificarCliente(request, cliente_id):
     context = {"titulo_pagina": "Modificar Cliente", "form": form}
     return render(request, "modificarCliente.html", context)
 
-
+@login_required(login_url="login")
 def modificarEmpleado(request, empleado_id):
     empleado = Empleado.objects.get(pk=empleado_id)
     form = EmpleadoForm(instance=empleado)
@@ -110,7 +114,7 @@ def modificarEmpleado(request, empleado_id):
     context = {"titulo_pagina": "Modificar Empleado", "form": form}
     return render(request, "modificarEmpleado.html", context)
 
-
+@login_required(login_url="login")
 def modificarProyecto(request, proyecto_id):
     proyecto = Proyecto.objects.get(pk=proyecto_id)
     form = ProyectoForm(instance=proyecto)
@@ -124,7 +128,7 @@ def modificarProyecto(request, proyecto_id):
     context = {"titulo_pagina": "Modificar Proyecto", "form": form}
     return render(request, "modificarProyecto.html", context)
 
-
+@login_required(login_url="login")
 def modificarTarea(request, tarea_id):
     tarea = Tarea.objects.get(pk=tarea_id)
     form = TareaForm(instance=tarea)
@@ -162,26 +166,26 @@ def borrarTarea(request, tarea_id):
     proyecto.delete()
     return redirect("listados")
 
-
+@login_required(login_url="login")
 def detProyecto(request, proyecto_id):
     proyecto = Proyecto.objects.get(pk=proyecto_id)
     context = {"titulo_pagina": "Proyecto Detallado", "pro": proyecto}
     return render(request, "detProyecto.html", context)
 
-
+@login_required(login_url="login")
 def detTarea(request, tarea_id):
     tarea = Tarea.objects.get(pk=tarea_id)
     notas = Nota.objects.filter(tarea=tarea)
     context = {"titulo_pagina": "Tarea Detallada", "tar": tarea, "notas": notas}
     return render(request, "detTarea.html", context)
 
-
+@login_required(login_url="login")
 def detEmpleado(request, empleado_id):
     empleado = Empleado.objects.get(pk=empleado_id)
     context = {"titulo_pagina": "Empleado Detallado", "emp": empleado}
     return render(request, "detEmpleado.html", context)
 
-
+@login_required(login_url="login")
 def detCliente(request, cliente_id):
     cliente = Cliente.objects.get(pk=cliente_id)
     context = {"titulo_pagina": "Cliente Detallado", "cli": cliente}
@@ -237,3 +241,41 @@ def enviarCorreo(request):
         form = EmailForm()
 
     return render(request, 'enviarCorreo.html', {'form': form})
+
+def login(request):
+    form = LoginForm()
+    
+    if request.method == "POST":
+        form = LoginForm(request, data=request.POST)
+        
+        if form.is_valid():
+            username = request.POST.get("username")
+            password = request.POST.get("password")
+            
+            user = authenticate(request, username=username, password=password)
+            
+            if user is not None:
+                auth.login(request, user)
+                
+                return redirect("listados")
+
+    context = {"form":form}
+    return render(request, "login.html", context=context)
+
+def registro(request):
+    form = CreateUserForm()
+    
+    if request.method == "POST":
+        form = CreateUserForm(request.POST)
+        
+        if form.is_valid():
+            form.save()
+            return redirect("login")
+
+    context = {"form":form}
+    return render(request, "registro.html", context=context)
+
+def logout(request):
+    auth.logout(request)
+    
+    return redirect("login")

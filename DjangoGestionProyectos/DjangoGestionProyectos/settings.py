@@ -10,7 +10,6 @@ For the full list of settings and their values, see
 https://docs.djangoproject.com/en/5.0/ref/settings/
 """
 
-from django.urls import reverse_lazy
 from pathlib import Path
 import os
 
@@ -132,7 +131,3 @@ EMAIL_PORT = 587
 EMAIL_USE_TLS = True
 EMAIL_HOST_USER = 'grupo9ingweb@gmail.com'
 EMAIL_HOST_PASSWORD = 'fbek hyvp gdea zwdy'
-
-LOGIN_REDIRECT_URL = reverse_lazy('listados')
-
-LOGOUT_REDIRECT_URL = reverse_lazy('login')

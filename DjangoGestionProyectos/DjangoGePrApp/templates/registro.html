@@ -21,28 +21,15 @@
         <h1 class="tituloIndex">Gestión de Proyectos - Deustotil Tech S.L.</h1>
       </div>
     </nav>
-
-        <!-- LOGIN -->
-
-    <div class="contenedor-login">
-      {% if form.errors%}
-        <div class="error-login">
-          <p>El usuario o/y la contraseña no coinciden.</p>     
-        </div>
-      {% endif %}
       
-      <form class="formulariologin" action="#" method="POST">
+      <!-- REGISTRO -->
+    <form class="formularioregistro" action="#" method="POST">
         {% csrf_token %}
-        
+    
         {{form.as_p}}
-      
-        <button type="submit">Iniciar Sesión</button>
-
-        </form>
-        <button class="btnReg" type="submit">
-          <a href="{% url 'registro' %}">Registrarse</a>
-        </button>
-    </div>
+  
+        <button type="submit">Registro</button>
+  
+    </form>
   </body>
 </html>
-
