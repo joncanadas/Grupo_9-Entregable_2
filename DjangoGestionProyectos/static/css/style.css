@@ -5,21 +5,28 @@
   --accent-color: #efa162;
   --form-background: #5cb85c; /* Verde complementario */
   --form-hover: #4cae4c;
-  --btn-blue: rgb(0, 162, 255);
-  --btn-yellow: rgb(226, 226, 84);
-  --btn-red: rgb(241, 64, 64);
+  --btn-green: #28a745; /* Verde */
+  --btn-green-hover: #218838; /* Verde oscuro */
+  --btn-blue: #17a2b8; /* Azul */
+  --btn-blue-hover: #138496; /* Azul oscuro */
+  --btn-yellow: #ffc107; /* Amarillo */
+  --btn-yellow-hover: #e0a800; /* Amarillo oscuro */
+  --btn-red: #dc3545; /* Rojo */
+  --btn-red-hover: #c82333; /* Rojo oscuro */;
 }
 
 body,
 html {
   height: 100%;
   font-family: "Poppins", sans-serif;
-  font-size: 62.5%;
+  font-size: 82.5%;
   box-sizing: border-box;
   margin: 0;
   padding: 0;
   background-color: var(--background-color);
+  line-height: 1.6;
 }
+
 
 * {
   margin: 0;
@@ -33,6 +40,7 @@ h3 {
   text-align: center;
   margin-bottom: 20px;
 }
+
 
 h1,
 h2 {
@@ -53,10 +61,19 @@ a {
   text-decoration: none;
 }
 
-input,
-button {
+input {
   outline: none;
   border: none;
+}
+
+button {
+  padding: 8px 12px;
+  margin: 5px 0;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  font-size: 0.9rem;
 }
 
 #id_fecha_inicio,
@@ -151,6 +168,7 @@ button {
   text-align: center;
   color: white;
   font-size: 2rem;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
 }
 
 .formulario div,
@@ -197,16 +215,17 @@ button[type="submit"] a {
 }
 
 .btnDet {
-  background-color: var(--btn-blue);
+  background-color: green;
 }
 
 .btnModificar {
-  background-color: var(--btn-yellow);
+  background-color: yellow;
 }
 
-.btnBorrar {
-  background-color: var(--btn-red);
+.btnBorrar, .borrar {
+  background-color: red;
 }
+
 
 .detallesProyecto h3,
 .detallesTarea h3,
@@ -243,6 +262,86 @@ button[type="submit"] a {
   font-size: 2rem;
 }
 
-#info-block{
+#info-block {
   display: none;
+  max-width: 800px;
+  margin: 20px auto;
+  padding: 20px;
+  background-color: var(--white);
+  border: 1px solid var(--secondary-color);
+  border-radius: 10px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+
+nav.contenedor {
+  padding: 20px;
+  text-align: center;
+}
+
+.header0 .tituloIndex {
+  color: var(--white);
+  font-size: 2.5rem;
+  margin: 0;
+}
+
+button#expand-button {
+  display: block;
+  background-color: var(--button-bg);
+  color: var(--white);
+  border: none;
+  padding: 10px 30px;
+  margin: 20px auto;
+  font-size: 0,8rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+button#expand-button:hover {
+  background-color: var(--button-hover-bg);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
+}
+
+
+#info-block p {
+  margin-bottom: 15px;
+  line-height: 1.6;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 20px;
+}
+
+th, td {
+  padding: 12px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+}
+
+.btnDet:hover {
+  background-color: var(--btn-green-hover);
+}
+
+.btnDetJS {
+  background-color: var(--btn-blue);
+}
+
+.btnDetJS:hover {
+  background-color: var(--btn-blue-hover);
+}
+
+.btnModificar:hover {
+  background-color: var(--btn-yellow-hover);
+}
+
+.btnBorrar:hover, .borrar:hover {
+  background-color: var(--btn-red-hover);
 }

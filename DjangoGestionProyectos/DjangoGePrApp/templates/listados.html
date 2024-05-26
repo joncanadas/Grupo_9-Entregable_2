@@ -10,13 +10,18 @@
     <button class="nav">
       <a href="{% url 'añadirNota' %}">Añadir Notas</a>
     </button>
+    <button class="nav"><a href="{% url 'listados' %}">Listado</a></button>
     <button class="nav">
       <a href="{% url 'añadirEmpleado' %}">Añadir Empleado</a>
     </button>
     <button class="nav">
       <a href="{% url 'añadirCliente' %}">Añadir Cliente</a>
     </button>
-  </div>
+    <button class="nav">
+      <a href="{% url 'enviarCorreo' %}">Contacto</a>
+    </button>
+    
+    </div>
 </div>
 
 <h3 class="detallesProyecto">Listado Proyectos</h3>
