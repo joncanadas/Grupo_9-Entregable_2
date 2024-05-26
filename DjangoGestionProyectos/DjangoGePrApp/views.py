@@ -1,4 +1,5 @@
 from django.http import HttpResponse
+from django.http import JsonResponse
 from django.shortcuts import redirect
 from django.shortcuts import render
 from django.core.mail import send_mail
@@ -215,8 +216,7 @@ def enviarCorreo(request):
                 '- Garantizar la seguridad y el bienestar de nuestro equipo y de todas las partes involucradas en nuestros proyectos.\n\n'
                 'Contáctenos\n\n'
                 'Si desea obtener más información sobre nuestros servicios o tiene alguna consulta, no dude en ponerse en contacto con nosotros. '
-                'Puede responder a este correo electrónico o llamarnos al 674231938.'
-                'para conocer más sobre nuestro trabajo.\n\n'
+                'Puede responder a este correo electrónico o llamarnos al 674231938 para conocer más sobre nuestro trabajo.\n\n'
                 'Agradecemos su interés en Deustronic Components S.L. y esperamos poder colaborar con usted en futuros proyectos.\n\n'
                 'Atentamente,\n\n'
                 'Mikel García García\n'
@@ -228,7 +228,7 @@ def enviarCorreo(request):
             send_mail(
                 subject,
                 message,
-                'tucorreo@gmail.com',  # Reemplaza con tu correo
+                'grupo9ingweb@gmail.com',
                 [email],
                 fail_silently=False,
             )
@@ -237,3 +237,16 @@ def enviarCorreo(request):
         form = EmailForm()
 
     return render(request, 'enviarCorreo.html', {'form': form})
+
+
+def proyecto_api(request, proyecto_id):
+    proyecto = Proyecto.objects.get(pk=proyecto_id)
+    data = {
+        'nombre': proyecto.nombre,
+        'descripcion': proyecto.descripcion,
+        'fecha_inicio': proyecto.fecha_inicio,
+        'fecha_fin': proyecto.fecha_fin,
+        'presupuesto': proyecto.presupuesto,
+        'cliente': proyecto.cliente.nombre,
+    }
+    return JsonResponse(data)
