@@ -242,3 +242,7 @@ button[type="submit"] a {
   color: white;
   font-size: 2rem;
 }
+
+#info-block{
+  display: none;
+}
