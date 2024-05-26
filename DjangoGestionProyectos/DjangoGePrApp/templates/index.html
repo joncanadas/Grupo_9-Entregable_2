@@ -1,0 +1,65 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Deustronic Components S.L</title>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@200..900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <nav class="contenedor">
+      <div class="header0">
+        <h1 class="tituloIndex">Gestión de Proyectos - Deustotil Tech S.L.</h1>
+      </div>
+    </nav>
+    <div>
+      <a href="{% url 'listados' %}">Listado</a>
+    </div>
+    <div>
+      <a href="{% url 'enviarCorreo' %}">Recibir Información</a>
+    </div>
+    <h1>Bienvenido a Deustotil Tech S.L.</h1>
+    <button id="expand-button">Expandir información</button>
+    <div id="info-block">
+      <p>
+        Somos Deustronic Components S.L, una empresa líder en el sector de la
+        tecnología. Nos especializamos en el desarrollo de soluciones
+        innovadoras para empresas de todos los tamaños. Nuestro equipo de
+        expertos trabaja arduamente para ofrecer productos y servicios de alta
+        calidad que satisfagan las necesidades de nuestros clientes.
+      </p>
+      <p>
+        Con más de 10 años de experiencia en el mercado, hemos establecido una
+        sólida reputación por nuestra excelencia en el diseño, la fabricación y
+        la entrega de productos tecnológicos de vanguardia. Nuestro compromiso
+        con la calidad y la satisfacción del cliente nos ha convertido en el
+        socio preferido de numerosas empresas en todo el mundo.
+      </p>
+      <p>
+        En Deustronic Components S.L, nos enorgullece ofrecer soluciones
+        personalizadas que impulsen el crecimiento y el éxito de nuestros
+        clientes. Ya sea que necesites desarrollo de software a medida, diseño
+        de hardware o servicios de consultoría tecnológica, nuestro equipo
+        altamente capacitado está listo para ayudarte a alcanzar tus objetivos.
+      </p>
+      <p>
+        ¡Gracias por elegir Deustronic Components S.L como tu socio tecnológico
+        de confianza!
+      </p>
+    </div>
+    <h2>{{ titulo_pagina }}</h2>
+
+    {% block contenido %} {% endblock %}
+
+    <script src="{% static 'js/expandirInfo.js' %}"></script>
+  </body>
+</html>
