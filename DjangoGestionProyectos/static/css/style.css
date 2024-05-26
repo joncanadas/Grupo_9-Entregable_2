@@ -332,6 +332,7 @@ th, td {
 
 .btnDetJS {
   background-color: var(--btn-blue);
+  color: white;
 }
 
 .btnDetJS:hover {
