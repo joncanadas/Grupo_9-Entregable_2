@@ -4,8 +4,8 @@
 <form class="formulario" action="#" method="POST">
   {% csrf_token %} {{form}}
 
-  <button type="submit">Añadir Cliente</button>
-  <button class="nav" type="submit">
+  <button class="buttonCrear" type="submit"><p>Añadir Cliente</p></button>
+  <button class="buttonCrear" type="submit">
     <a href="{% url 'listados' %}">Volver</a>
   </button>
 </form>
