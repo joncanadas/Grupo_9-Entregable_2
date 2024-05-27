@@ -1,45 +1,46 @@
-const footer = {
-    nombre : 'Amaia',
-    apellidos : 'Jainaga Urrutia',
-    edad : 27,
-    email : 'amaia@email.com',
-}
+function generarFooter() {
+    const footer = document.createElement('footer');
+    footer.classList.add('site-footer');
+  
+    const contenedor = document.createElement('div');
+    contenedor.classList.add('grid-footer', 'contenedor');
+  
+    const nav = document.createElement('nav');
+    nav.classList.add('footer-menu');
+  
+    const direccionTit = document.createElement('a');
+    direccionTit.textContent = 'Dirección:';
+  
+    const direccionCalle = document.createElement('a');
+    direccionCalle.textContent = 'Calle Arriagako Atea, 62\n01013 Vitoria-Gasteiz, Álava';
 
+    const telefonoTit = document.createElement('a');
+    telefonoTit.textContent = 'Teléfono:';
+  
+    const telefonoNum = document.createElement('a');
+    telefonoNum.textContent = '+34 945 123 456';
+  
+    nav.appendChild(direccionTit);
+    nav.appendChild(direccionCalle);
+    nav.appendChild(telefonoTit);
+    nav.appendChild(telefonoNum);
+  
+    contenedor.appendChild(nav);
+    footer.appendChild(contenedor);
+  
+    const copyright = document.createElement('p');
+    copyright.classList.add('copyright');
+    copyright.textContent = 'Derechos reservados por ';
+  
+    const span = document.createElement('span');
+    span.textContent = 'Deustotil Tech S.L.';
+    copyright.appendChild(span);
+  
+    footer.appendChild(copyright);
+  
+    return footer;
+  }
 
-function crearElemento(label, valor) {
-    return `<li>${label} : ${valor}</li>`;
-}
+  const footerElement = document.getElementById('contenedor-footer');
+  footerElement.appendChild(generarFooter());
 
-function crearLista(objeto){
-    let lista = '<ul>'
-    for(const key in objeto){
-        console.log(key); // Clave
-        console.log(objeto[key]); // Valor
-        lista += crearElemento(key, objeto[key]); // estudiante["nombre"]
-    }
-    lista += '</ul>'
-    return lista;
-}
-
-let listaHTML = crearLista(footer);
-document.getElementById('footer').insertAdjacentHTML('afterbegin', listaHTML);
-//document.getElementById('lista').innerHTML = listaHTML;
-
-//En base a este html
-
-/*
-<footer class="site-footer">
-        <div class="grid-footer contenedor">
-            <nav class="footer-menu">
-                <a href="#">Dirección:</a>
-                <a href="#">Calle del Dron, 12 <br> 01001
-                    Vitoria-Gasteiz, Álava</a>
-                <a href="#">Teléfono:</a>
-                <a href="#">+34 945 123 456</a>
-            </nav>
-        </div>
-
-        <p class="copyright">Derechos reservados a
-            <span>BrumaDron</span></p>
-    </footer>
-*/

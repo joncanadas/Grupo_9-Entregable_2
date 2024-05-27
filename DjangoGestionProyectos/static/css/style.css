@@ -689,3 +689,43 @@ td {
 .Enviado3 :hover {
   color: #28a745;
 }
+
+/*Footer*/
+
+.site-footer {
+  border-top: 1px solid #e1e1e1;
+  margin-top: 4rem;
+}
+
+.grid-footer {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  margin-top: 2%;
+  text-align: center;
+}
+
+.footer-menu:nth-child(1) {
+  grid-column-start: 1;
+  grid-column-end: 3;
+}
+
+.footer-menu {
+  display: flex;
+  flex-direction: column;
+}
+
+.footer-menu a {
+  margin-top: 0.5rem;
+}
+
+.copyright {
+  text-align: center;
+  margin-top: 1.5rem;
+  padding-bottom: 0.5rem;
+}
+
+.copyright span {
+  font-weight: bold;
+}
+
+/*End Footer*/
