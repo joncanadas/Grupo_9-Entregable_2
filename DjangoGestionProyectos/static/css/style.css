@@ -370,15 +370,23 @@ th, td {
 }
 
 
+
 .contenedor-login {
   background: #ffffff;
   padding: 30px;
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  width: 600px;
-  height: 395px;
-  max-width: 1000px;
-  text-align: center; 
+  width: 100%;
+  max-width: 850px;
+  text-align: center;
+  margin-top: 40PX;
+  font-size: 14px;
+}
+
+.tituloLogin {
+  font-size: 24px;
+  margin-bottom: 20px;
+  color: #333333;
 }
 
 .error-login {
@@ -421,17 +429,23 @@ th, td {
 .btnReg {
   margin-top: 20px;
 }
-.btnReg a{
+
+.btnReg a {
+  display: block;
   padding: 10px;
-  background: #28a745;;
+  background: #28a745;
   color: #ffffff;
-  border: none;
+  text-decoration: none;
   border-radius: 5px;
-  cursor: pointer;
   transition: background 0.3s;
 }
 
-.btn Reg a:hover{  background: #218838;
+.btnReg a:hover {
+  background: #218838;
+}
+
+.btnReg a:visited {
+  color: #ffffff;
 }
 
 .centrado{
@@ -439,6 +453,25 @@ th, td {
   justify-content: center;
   align-items: center;
 }
+
+.header1 {
+  text-align: center;
+  padding: 10px;
+}
+
+.header1 {
+  text-align: left;
+}
+
+.header1 {
+  color: var(--white);
+  font-size: 2.5rem;
+  margin: 0;
+}
+.header1 {
+  color: #ffffff;
+}
+-------------------------------
 
 
 .bodyRegistro {
@@ -450,13 +483,6 @@ th, td {
   margin: 0;
   background: #f0f2f5;
   font-family: Arial, sans-serif;
-}
-.contenedor {
-  width: 200px;
-  background: #007bff;
-  padding: 20px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  text-align: center;
 }
 
 .header0 {
