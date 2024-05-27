@@ -1,9 +1,11 @@
+
+
 {% extends "index.html" %} {% block contenido %}
 
-<h1>¡Éxito!</h1>
-<p>
+<h1 class="Enviado">¡Éxito!</h1>
+<p class="Enviado2">
   La información de nuestra empresa ha sido enviada a tu correo electrónico.
 </p>
 
-<a href="{% url 'listados' %}">Volver</a>
+<a class="Enviado3" href="{% url 'listados' %}">Volver</a>
 {% endblock %}

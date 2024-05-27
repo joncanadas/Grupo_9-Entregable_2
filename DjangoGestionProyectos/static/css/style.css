@@ -3,16 +3,26 @@
   --background-color: #f9f5f0;
   --dark-color: #151515;
   --accent-color: #efa162;
-  --form-background: #5cb85c; /* Verde complementario */
+  --form-background: #5cb85c;
+  /* Verde complementario */
   --form-hover: #4cae4c;
-  --btn-green: #28a745; /* Verde */
-  --btn-green-hover: #218838; /* Verde oscuro */
-  --btn-blue: #17a2b8; /* Azul */
-  --btn-blue-hover: #138496; /* Azul oscuro */
-  --btn-yellow: #ffc107; /* Amarillo */
-  --btn-yellow-hover: #e0a800; /* Amarillo oscuro */
-  --btn-red: #dc3545; /* Rojo */
-  --btn-red-hover: #c82333; /* Rojo oscuro */;
+  --btn-green: #28a745;
+  /* Verde */
+  --btn-green-hover: #218838;
+  /* Verde oscuro */
+  --btn-blue: #17a2b8;
+  /* Azul */
+  --btn-blue-hover: #138496;
+  /* Azul oscuro */
+  --btn-yellow: #ffc107;
+  /* Amarillo */
+  --btn-yellow-hover: #e0a800;
+  /* Amarillo oscuro */
+  --btn-red: #dc3545;
+  /* Rojo */
+  --btn-red-hover: #c82333;
+  /* Rojo oscuro */
+  ;
 }
 
 body,
@@ -201,7 +211,7 @@ button[type="submit"] {
   background-color: var(--form-background);
   color: white;
   padding: 1rem 2rem;
-  border-radius: 4px;
+  border-radius: 2px;
   cursor: pointer;
 }
 
@@ -216,14 +226,21 @@ button[type="submit"] a {
 
 .btnDet {
   background-color: green;
+  font-size: 20px;
+  /*CAMBIAR LETRA BOTONES*/
 }
 
 .btnModificar {
   background-color: yellow;
+  font-size: 20px;
+  /*CAMBIAR LETRA BOTONES*/
 }
 
-.btnBorrar, .borrar {
+.btnBorrar,
+.borrar {
   background-color: red;
+  font-size: 20px;
+  /*CAMBIAR LETRA BOTONES*/
 }
 
 
@@ -292,7 +309,7 @@ button#expand-button {
   border: none;
   padding: 10px 30px;
   margin: 20px auto;
-  font-size: 0,8rem;
+  font-size: 0, 8rem;
   font-weight: bold;
   text-transform: uppercase;
   letter-spacing: 1px;
@@ -320,7 +337,8 @@ table {
   margin-bottom: 20px;
 }
 
-th, td {
+th,
+td {
   padding: 12px;
   text-align: left;
   border-bottom: 1px solid #ddd;
@@ -332,6 +350,7 @@ th, td {
 
 .btnDetJS {
   background-color: var(--btn-blue);
+  color: white;
 }
 
 .btnDetJS:hover {
@@ -342,6 +361,331 @@ th, td {
   background-color: var(--btn-yellow-hover);
 }
 
-.btnBorrar:hover, .borrar:hover {
+.btnBorrar:hover,
+.borrar:hover {
   background-color: var(--btn-red-hover);
+}
+
+.navSesion {
+  background-color: var(--background-color);
+  padding: 10px;
+  display: inline-block;
+  margin-right: 20px;
+  font-weight: bold;
+  border: none;
+  cursor: pointer;
+}
+
+.navSesion a {
+  color: rgb(193, 8, 8);
+  font-weight: bold;
+}
+
+.navSesion a:hover {
+  color: var(--dark-color);
+}
+
+
+
+.contenedor-login {
+  background: #ffffff;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 850px;
+  text-align: center;
+  margin-top: 40PX;
+  font-size: 14px;
+}
+
+.tituloLogin {
+  font-size: 24px;
+  margin-bottom: 20px;
+  color: #333333;
+}
+
+.error-login {
+  background: #ffdddd;
+  color: #d8000c;
+  padding: 10px;
+  border-radius: 5px;
+  margin-bottom: 20px;
+}
+
+.formulariologin {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.formulariologin input[type="text"],
+.formulariologin input[type="password"] {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.formulariologin button {
+  padding: 10px;
+  background: #007bff;
+  color: #ffffff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.formulariologin button:hover {
+  background: #0056b3;
+}
+
+.btnReg {
+  margin-top: 20px;
+}
+
+.btnReg a {
+  display: block;
+  padding: 10px;
+  background: #28a745;
+  color: #ffffff;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: background 0.3s;
+}
+
+.btnReg a:hover {
+  background: #218838;
+}
+
+.btnReg a:visited {
+  color: #ffffff;
+}
+
+.centrado {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.header1 {
+  text-align: center;
+  padding: 10px;
+}
+
+.header1 {
+  text-align: left;
+}
+
+.header1 {
+  color: var(--white);
+  font-size: 2.5rem;
+  margin: 0;
+}
+
+.header1 {
+  color: #ffffff;
+}
+
+------------------------------- .bodyRegistro {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+}
+
+.tituloRegistro {
+  background-color: var(--background-color);
+}
+
+.contenedor3 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+  background: var(--background-color);
+}
+
+.tituloRegistro {
+  font-size: 24px;
+  margin-bottom: 20px;
+  color: #333333;
+  background-color: white;
+}
+
+.formularioregistro {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  background-color: white;
+  width: 100%;
+  max-width: 600px;
+  padding: 30px;
+  box-sizing: border-box;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.formularioregistro input[type="text"],
+.formularioregistro input[type="password"],
+.formularioregistro input[type="email"] {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.formularioregistro button {
+  padding: 10px;
+  background: #28a745;
+  color: #ffffff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.formularioregistro button:hover {
+  background: #218838;
+}
+
+.buttonCrear {
+  font-size: 14px;
+  padding: 10px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+  border: none;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.buttonCrear a {
+  color: inherit;
+  text-decoration: none;
+  display: block;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  padding: 7px 11px;
+}
+
+.buttonCrear p {
+  color: inherit;
+  text-decoration: none;
+  display: block;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  padding: 7px 11px;
+}
+
+.buttonCrear[type="submit"] {
+  background-color: #28a745;
+}
+
+
+
+.bodycorreo {
+  background-color: #f4f7f6;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+
+.container5 {
+  background: var(--primary-color);
+  padding: 40px;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 500px;
+  text-align: center;
+}
+
+
+.Info {
+  font-size: 2em;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+
+.form2 {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+
+.form2 input[type="text"],
+.form2 input[type="email"],
+.form2 input[type="password"],
+.form2 textarea,
+.form2 select {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+
+.form2 button {
+  padding: 10px 20px;
+  background-color: #28a745;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+
+.form2 .buttonCrear {
+  width: auto;
+  padding: 5px;
+  margin-top: 10px;
+}
+
+.Enviado {
+  font-size: 2em;
+  color: #333;
+  text-align: center;
+  margin-top: 50px;
+}
+
+.Enviado2 {
+  font-size: 1.2em;
+  color: #666;
+  text-align: center;
+  margin-top: 20px;
+}
+
+.Enviado3 {
+  display: block;
+  margin-top: 30px;
+  text-align: center;
+  text-decoration: none;
+  color: #28a745;
+  ;
+  font-size: 18px;
+  transition: color 0.3s ease;
+}
+
+.Enviado3 :hover {
+  color: #28a745;
 }

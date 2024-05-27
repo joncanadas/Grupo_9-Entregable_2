@@ -1,29 +1,4 @@
 {% extends "index.html" %} {% block contenido %}
-<div class="contenedor">
-  <div class="header">
-    <button class="nav">
-      <a href="{% url 'crearProyecto' %}">Crear Proyecto</a>
-    </button>
-    <button class="nav">
-      <a href="{% url 'crearTareas' %}">Crear Tarea</a>
-    </button>
-    <button class="nav">
-      <a href="{% url 'añadirNota' %}">Añadir Notas</a>
-    </button>
-    <button class="nav"><a href="{% url 'listados' %}">Listado</a></button>
-    <button class="nav">
-      <a href="{% url 'añadirEmpleado' %}">Añadir Empleado</a>
-    </button>
-    <button class="nav">
-      <a href="{% url 'añadirCliente' %}">Añadir Cliente</a>
-    </button>
-    <button class="nav">
-      <a href="{% url 'enviarCorreo' %}">Contacto</a>
-    </button>
-    
-    </div>
-</div>
-
 <h3 class="detallesProyecto">Listado Proyectos</h3>
 <div class="formulario">
   <table>
@@ -42,7 +17,7 @@
         <button class="btnDet" type="submit">
           <a href="{% url 'detProyecto' pro.id %}">Ver</a>
         </button>
-        <button class="btnDetJS" type="button" data-proyecto-id="{{ pro.id }}">Ver JS</button>
+        <button class="btnDetJS" type="button" data-proyecto-id="{{ pro.id }}">Ver (JS)</button>
       </th>
       <th>
         <button class="btnModificar" type="submit">
