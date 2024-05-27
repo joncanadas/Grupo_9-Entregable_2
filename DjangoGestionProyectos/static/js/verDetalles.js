@@ -5,11 +5,10 @@ document.addEventListener("DOMContentLoaded", function () {
     // Añade un evento de clic a cada botón
     botones.forEach(boton => {
         boton.addEventListener('click', function() {
-            // Cuando se hace clic en un botón, obtén el ID del proyecto de un atributo de datos
             var proyectoId = this.dataset.proyectoId;
 
             // Ahora puedes hacer la llamada fetch con este ID
-            fetch(`/api/proyecto/${proyectoId}/`)
+            fetch('https://jsonplaceholder.typicode.com/users') // Esta es la URL de la API de nuestra aplicación, pero no encuentra los objetos `/api/proyecto/${proyectoId}/`
                 .then(response => response.json())
                 .then(data => {
                     // Aquí tienes los datos del proyecto
