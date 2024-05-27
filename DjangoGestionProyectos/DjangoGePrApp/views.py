@@ -170,7 +170,8 @@ def borrarTarea(request, tarea_id):
 @login_required(login_url="login")
 def detProyecto(request, proyecto_id):
     proyecto = Proyecto.objects.get(pk=proyecto_id)
-    context = {"titulo_pagina": "Proyecto Detallado", "pro": proyecto}
+    tareas = Tarea.objects.filter(proyecto=proyecto)
+    context = {"titulo_pagina": "Proyecto Detallado", "pro": proyecto, "tareas": tareas}
     return render(request, "detProyecto.html", context)
 
 @login_required(login_url="login")

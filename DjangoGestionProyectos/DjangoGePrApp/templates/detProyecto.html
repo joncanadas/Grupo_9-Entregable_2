@@ -25,6 +25,14 @@
     <strong>Cliente: </strong> {{ pro.cliente }}
     <span id="cliente"></span>
   </div>
+  <div>
+    <strong>Tareas asociadas: </strong>
+    {% for tarea in tareas %}
+    {{ tarea.nombre }} - Prioridad( {{ tarea.nivel_prioridad }} ) 
+    {% empty %}
+    <p>No hay tareas para este proyecto.</p>
+    {% endfor %}
+  </div>
   <button class="buttonCrear" type="submit">
     <a href="{% url 'listados' %}">Volver</a>
   </button>
