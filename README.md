@@ -15,7 +15,7 @@ Sigue estos pasos para configurar y ejecutar el proyecto en tu entorno local.
 
 ### Prerrequisitos
 
-- Python 3.x
+- Python 3.12.0
 - pip
 - asgiref==3.8.0
 - Django==5.0.3
