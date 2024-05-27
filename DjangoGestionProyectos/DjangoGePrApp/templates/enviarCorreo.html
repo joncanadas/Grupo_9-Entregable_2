@@ -1,10 +1,17 @@
-{% extends "index.html" %} {% block contenido %}
+{% extends "index.html" %}
+{% block contenido %}
+<div class="bodycorreo">
+  <div class="container5">
+    <h1 class="Info">Enviar Información de la Empresa</h1>
 
-<h1>Enviar Información de la Empresa</h1>
-<form method="post">
-  {% csrf_token %} {{ form.as_p }}
-  <button type="submit">Enviar</button>
-</form>
-
-<a href="{% url 'listados' %}">Volver</a>
+    <form class="form2" method="post">
+      {% csrf_token %}
+      {{ form.as_p }}
+      <button class="buttonCrear" type="submit"><p>Enviar</p></button>
+    <button class="buttonCrear">
+      <a href="{% url 'listados' %}">Volver</a>
+    </button>
+  </form>
+  </div>
+</div>
 {% endblock %}

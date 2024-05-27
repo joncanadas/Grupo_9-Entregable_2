@@ -3,16 +3,26 @@
   --background-color: #f9f5f0;
   --dark-color: #151515;
   --accent-color: #efa162;
-  --form-background: #5cb85c; /* Verde complementario */
+  --form-background: #5cb85c;
+  /* Verde complementario */
   --form-hover: #4cae4c;
-  --btn-green: #28a745; /* Verde */
-  --btn-green-hover: #218838; /* Verde oscuro */
-  --btn-blue: #17a2b8; /* Azul */
-  --btn-blue-hover: #138496; /* Azul oscuro */
-  --btn-yellow: #ffc107; /* Amarillo */
-  --btn-yellow-hover: #e0a800; /* Amarillo oscuro */
-  --btn-red: #dc3545; /* Rojo */
-  --btn-red-hover: #c82333; /* Rojo oscuro */;
+  --btn-green: #28a745;
+  /* Verde */
+  --btn-green-hover: #218838;
+  /* Verde oscuro */
+  --btn-blue: #17a2b8;
+  /* Azul */
+  --btn-blue-hover: #138496;
+  /* Azul oscuro */
+  --btn-yellow: #ffc107;
+  /* Amarillo */
+  --btn-yellow-hover: #e0a800;
+  /* Amarillo oscuro */
+  --btn-red: #dc3545;
+  /* Rojo */
+  --btn-red-hover: #c82333;
+  /* Rojo oscuro */
+  ;
 }
 
 body,
@@ -216,17 +226,21 @@ button[type="submit"] a {
 
 .btnDet {
   background-color: green;
-  font-size: 20px;  /*CAMBIAR LETRA BOTONES*/
+  font-size: 20px;
+  /*CAMBIAR LETRA BOTONES*/
 }
 
 .btnModificar {
   background-color: yellow;
-  font-size: 20px; /*CAMBIAR LETRA BOTONES*/
+  font-size: 20px;
+  /*CAMBIAR LETRA BOTONES*/
 }
 
-.btnBorrar, .borrar {
+.btnBorrar,
+.borrar {
   background-color: red;
-  font-size: 20px; /*CAMBIAR LETRA BOTONES*/
+  font-size: 20px;
+  /*CAMBIAR LETRA BOTONES*/
 }
 
 
@@ -295,7 +309,7 @@ button#expand-button {
   border: none;
   padding: 10px 30px;
   margin: 20px auto;
-  font-size: 0,8rem;
+  font-size: 0, 8rem;
   font-weight: bold;
   text-transform: uppercase;
   letter-spacing: 1px;
@@ -323,7 +337,8 @@ table {
   margin-bottom: 20px;
 }
 
-th, td {
+th,
+td {
   padding: 12px;
   text-align: left;
   border-bottom: 1px solid #ddd;
@@ -346,11 +361,12 @@ th, td {
   background-color: var(--btn-yellow-hover);
 }
 
-.btnBorrar:hover, .borrar:hover {
+.btnBorrar:hover,
+.borrar:hover {
   background-color: var(--btn-red-hover);
 }
 
-.navSesion{
+.navSesion {
   background-color: var(--background-color);
   padding: 10px;
   display: inline-block;
@@ -448,7 +464,7 @@ th, td {
   color: #ffffff;
 }
 
-.centrado{
+.centrado {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -468,11 +484,12 @@ th, td {
   font-size: 2.5rem;
   margin: 0;
 }
+
 .header1 {
   color: #ffffff;
 }
--------------------------------
-.bodyRegistro {
+
+------------------------------- .bodyRegistro {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -481,7 +498,7 @@ th, td {
   margin: 0;
 }
 
-.tituloRegistro{
+.tituloRegistro {
   background-color: var(--background-color);
 }
 
@@ -539,42 +556,136 @@ th, td {
   background: #218838;
 }
 
-
-
-
-
-
 .buttonCrear {
-  font-size: 14px;  /* Tamaño de la fuente más grande */
-  padding: 10px 15px;  /* Relleno más grande */
-  border-radius: 5px;  /* Bordes más redondeados */
-  cursor: pointer;  /* Cambiar el cursor al pasar sobre el botón */
-  border: none;  /* Quitar el borde predeterminado */
-  display: inline-flex;  /* Para asegurar que el contenido del botón esté centrado */
-  align-items: center;  /* Centrar verticalmente */
-  justify-content: center;  /* Centrar horizontalmente */
+  font-size: 14px;
+  padding: 10px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+  border: none;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .buttonCrear a {
-  color: inherit;  /* Heredar el color del botón */
-  text-decoration: none;  /* Quitar el subrayado del enlace */
-  display: block;  /* Hacer que el enlace ocupe todo el botón */
+  color: inherit;
+  text-decoration: none;
+  display: block;
   width: 100%;
   height: 100%;
-  text-align: center;  /* Centrar el texto */
-  padding: 7px 11px;  /* Asegurar que el enlace tenga el mismo padding */
+  text-align: center;
+  padding: 7px 11px;
 }
 
 .buttonCrear p {
-  color: inherit;  /* Heredar el color del botón */
-  text-decoration: none;  /* Quitar el subrayado del enlace */
-  display: block;  /* Hacer que el enlace ocupe todo el botón */
+  color: inherit;
+  text-decoration: none;
+  display: block;
   width: 100%;
   height: 100%;
-  text-align: center;  /* Centrar el texto */
-  padding: 7px 11px;  /* Asegurar que el enlace tenga el mismo padding */
+  text-align: center;
+  padding: 7px 11px;
 }
 
 .buttonCrear[type="submit"] {
-  background-color: #28a745;  /* Color de fondo del botón 'Añadir nota' */
+  background-color: #28a745;
+}
+
+
+
+.bodycorreo {
+  background-color: #f4f7f6;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+
+.container5 {
+  background: var(--primary-color);
+  padding: 40px;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 500px;
+  text-align: center;
+}
+
+
+.Info {
+  font-size: 2em;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+
+.form2 {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+
+.form2 input[type="text"],
+.form2 input[type="email"],
+.form2 input[type="password"],
+.form2 textarea,
+.form2 select {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+
+.form2 button {
+  padding: 10px 20px;
+  background-color: #28a745;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+
+.form2 .buttonCrear {
+  width: auto;
+  padding: 5px;
+  margin-top: 10px;
+}
+
+.Enviado {
+  font-size: 2em;
+  color: #333;
+  text-align: center;
+  margin-top: 50px;
+}
+
+.Enviado2 {
+  font-size: 1.2em;
+  color: #666;
+  text-align: center;
+  margin-top: 20px;
+}
+
+.Enviado3 {
+  display: block;
+  margin-top: 30px;
+  text-align: center;
+  text-decoration: none;
+  color: #28a745;
+  ;
+  font-size: 18px;
+  transition: color 0.3s ease;
+}
+
+.Enviado3 :hover {
+  color: #28a745;
 }
