@@ -443,7 +443,7 @@ td {
 }
 
 .btnReg {
-  margin-top: 20px;
+  margin-top: 10px;
 }
 
 .btnReg a {
@@ -452,7 +452,7 @@ td {
   background: #28a745;
   color: #ffffff;
   text-decoration: none;
-  border-radius: 5px;
+  border-radius: 10px;
   transition: background 0.3s;
 }
 
