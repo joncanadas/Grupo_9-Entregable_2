@@ -26,4 +26,4 @@ Sigue estos pasos para configurar y ejecutar el proyecto en tu entorno local.
 
 ```bash
 git clone https://github.com/joncanadas/Grupo_9-Entregable_2.git
-cd nombre-del-repositorio
+cd Grupo_9-Entregable_2
