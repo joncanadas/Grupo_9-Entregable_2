@@ -538,3 +538,43 @@ th, td {
 .formularioregistro button:hover {
   background: #218838;
 }
+
+
+
+
+
+
+.buttonCrear {
+  font-size: 14px;  /* Tamaño de la fuente más grande */
+  padding: 10px 15px;  /* Relleno más grande */
+  border-radius: 5px;  /* Bordes más redondeados */
+  cursor: pointer;  /* Cambiar el cursor al pasar sobre el botón */
+  border: none;  /* Quitar el borde predeterminado */
+  display: inline-flex;  /* Para asegurar que el contenido del botón esté centrado */
+  align-items: center;  /* Centrar verticalmente */
+  justify-content: center;  /* Centrar horizontalmente */
+}
+
+.buttonCrear a {
+  color: inherit;  /* Heredar el color del botón */
+  text-decoration: none;  /* Quitar el subrayado del enlace */
+  display: block;  /* Hacer que el enlace ocupe todo el botón */
+  width: 100%;
+  height: 100%;
+  text-align: center;  /* Centrar el texto */
+  padding: 7px 11px;  /* Asegurar que el enlace tenga el mismo padding */
+}
+
+.buttonCrear p {
+  color: inherit;  /* Heredar el color del botón */
+  text-decoration: none;  /* Quitar el subrayado del enlace */
+  display: block;  /* Hacer que el enlace ocupe todo el botón */
+  width: 100%;
+  height: 100%;
+  text-align: center;  /* Centrar el texto */
+  padding: 7px 11px;  /* Asegurar que el enlace tenga el mismo padding */
+}
+
+.buttonCrear[type="submit"] {
+  background-color: #28a745;  /* Color de fondo del botón 'Añadir nota' */
+}
