@@ -18,6 +18,7 @@
           <a href="{% url 'detProyecto' pro.id %}">Ver</a>
         </button>
         <button class="btnDetJS" type="button" data-proyecto-id="{{ pro.id }}">Ver (JS)</button>
+        <div id="proyecto-{{ pro.id }}-info" class="proyecto-info"></div>
       </th>
       <th>
         <button class="btnModificar" type="submit">
