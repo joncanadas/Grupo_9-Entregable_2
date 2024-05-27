@@ -16,20 +16,16 @@
     />
   </head>
   <body>
-    <nav class="contenedor">
-      <div class="header0">
-        <h1 class="tituloIndex">Gestión de Proyectos - Deustotil Tech S.L.</h1>
-      </div>
-    </nav>
-      
+  <div class="bodyRegistro">
+    <div class="contenedor-registro">
+      <h2 class="tituloRegistro">Crear Cuenta</h2>
       <!-- REGISTRO -->
-    <form class="formularioregistro" action="#" method="POST">
-        {% csrf_token %}
-    
-        {{form.as_p}}
-  
-        <button type="submit">Registro</button>
-  
-    </form>
+      <form class="formularioregistro" action="#" method="POST">
+          {% csrf_token %}
+          {{ form.as_p }}
+          <button type="submit">Registro</button>
+      </form>
+  </div>
+  </div>
   </body>
 </html>
