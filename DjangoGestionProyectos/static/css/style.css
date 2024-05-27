@@ -472,8 +472,6 @@ th, td {
   color: #ffffff;
 }
 -------------------------------
-
-
 .bodyRegistro {
   display: flex;
   flex-direction: column;
@@ -481,41 +479,40 @@ th, td {
   align-items: center;
   height: 100vh;
   margin: 0;
-  background: #f0f2f5;
-  font-family: Arial, sans-serif;
 }
 
-.header0 {
-  color: #ffffff;
+.tituloRegistro{
+  background-color: var(--background-color);
 }
 
-.tituloIndex {
-  margin: 0;
-  font-size: 24px;
-}
-
-.contenedor-registro {
-  background: #ffffff;
-  padding: 30px;
-  border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  width: 850px;
-  max-width: 1050px;
-  text-align: center;
-  margin-top: 20px;
-  font-size: 14px;
+.contenedor3 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+  background: var(--background-color);
 }
 
 .tituloRegistro {
   font-size: 24px;
   margin-bottom: 20px;
   color: #333333;
+  background-color: white;
 }
 
 .formularioregistro {
   display: flex;
   flex-direction: column;
   gap: 15px;
+  background-color: white;
+  width: 100%;
+  max-width: 600px;
+  padding: 30px;
+  box-sizing: border-box;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 .formularioregistro input[type="text"],

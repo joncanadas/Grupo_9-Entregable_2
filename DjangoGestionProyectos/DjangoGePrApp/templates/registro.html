@@ -15,17 +15,15 @@
       rel="stylesheet"
     />
   </head>
-  <body>
-  <div class="bodyRegistro">
-    <div class="contenedor-registro">
-      <h2 class="tituloRegistro">Crear Cuenta</h2>
-      <!-- REGISTRO -->
-      <form class="formularioregistro" action="#" method="POST">
-          {% csrf_token %}
-          {{ form.as_p }}
-          <button type="submit">Registro</button>
-      </form>
-  </div>
-  </div>
-  </body>
+  <body class="bodyRegistro">
+    <div class="contenedor3">
+        <h2 class="tituloRegistro">Crear Cuenta</h2>
+        <!-- REGISTRO -->
+        <form class="formularioregistro" action="#" method="POST">
+            {% csrf_token %}
+            {{ form.as_p }}
+            <button type="submit">Registro</button>
+        </form>
+    </div>
+</body>
 </html>
