@@ -70,13 +70,20 @@
         <button class="nav">
           <a href="{% url 'enviarCorreo' %}">Contacto</a>
         </button>
-        <button class="navSesion"><a href="{% url 'logout' %}">Cerrar Sesión</a></button>
-       </div>   
+        <button class="nav" id="aumentarTxt">
+          <a href="#">+</a>
+        </button>
+        <button class="nav" id="disminuirTxt">
+          <a href="#">-</a>
+        </button> 
+        <button class="navSesion"><a href="{% url 'logout' %}">Cerrar Sesión</a></button> 
+      </div>  
  
     <h2>{{ titulo_pagina }}</h2>
     
     {% block contenido %} {% endblock %}
     
+      <script src="{% static 'js/alterarTextos.js' %}"></script>
       <script src="{% static 'js/generarHtml.js' %}"></script>
       <script src="{% static 'js/validarFormularios.js' %}"></script>
       <script src="{% static 'js/expandirInfo.js' %}"></script>

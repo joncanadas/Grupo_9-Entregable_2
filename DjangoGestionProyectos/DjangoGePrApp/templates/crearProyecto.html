@@ -1,6 +1,6 @@
 {% extends "index.html" %} {% block contenido %}
 
-<form class="formulario" action="#" method="POST">
+<form id="formularioCrP" class="formulario" action="#" method="POST">
   {% csrf_token %} {{form}}
 
   <button class="buttonCrear" type="submit"><p>Creación Proyecto</p></button>

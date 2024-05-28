@@ -44,3 +44,35 @@ function generarFooter() {
   const footerElement = document.getElementById('contenedor-footer');
   footerElement.appendChild(generarFooter());
 
+const informacion = [
+  {
+      cliente : 'Tesla',
+      descripcion : 'Proyecto de autoreparación'
+  },
+  {
+      cliente : 'Nasa',
+      descripcion : 'Proyecto de gestión de coordenadas'
+  },
+  {
+      cliente : 'FiFa',
+      descripcion : 'Proyecto de control de expedientes'
+  }
+];
+
+function crearElemento(label, valor) {
+  return `<ol>${label} : ${valor}</ol>`;
+}
+
+function crearLista(informacion){
+  let lista = '<ul>'
+  for(const key in informacion){
+      console.log(key); 
+      console.log(informacion[key]); 
+      lista += crearElemento(key, informacion[key]); 
+  }
+  lista += '</ul>'
+  return lista;
+}
+
+let listaHTML = crearLista(informacion);
+document.getElementById('contenedor-informacion').insertAdjacentHTML('afterbegin', listaHTML);

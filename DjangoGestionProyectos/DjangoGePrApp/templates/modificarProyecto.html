@@ -1,7 +1,7 @@
 {% extends "index.html" %} {% block contenido %}
 
 <!-- Formulario -->
-<form class="formulario" action="#" method="POST">
+<form id="formularioMdfP"class="formulario" action="#" method="POST">
   {% csrf_token %} {{ form }}
 
   <button class="buttonCrear" type="submit">Guardar Cambios</button>

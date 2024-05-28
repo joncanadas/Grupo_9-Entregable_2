@@ -11,6 +11,7 @@ class ProyectoForm(ModelForm):
         model = Proyecto
         fields = "__all__"
         widgets = {
+            "nombre": forms.TextInput(attrs={'id': 'nombrePro'}),
             "fecha_inicio": forms.DateInput(attrs={"type": "date"}),
             "fecha_fin": forms.DateInput(attrs={"type": "date"}),
         }
