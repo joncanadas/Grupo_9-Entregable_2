@@ -46,33 +46,51 @@ function generarFooter() {
 
 const informacion = [
   {
+      pro: 1,
       cliente : 'Tesla',
       descripcion : 'Proyecto de autoreparación'
   },
   {
+      pro: 2,
       cliente : 'Nasa',
       descripcion : 'Proyecto de gestión de coordenadas'
   },
   {
+      pro: 3,
       cliente : 'FiFa',
       descripcion : 'Proyecto de control de expedientes'
   }
 ];
 
-function crearElemento(label, valor) {
-  return `<ol>${label} : ${valor}</ol>`;
+function crearInfo(pro, cliente, descripcion){
+  return `
+      <tr>
+          <td>${pro}</td>
+          <td>${cliente}</td>
+          <td>${descripcion}</td>
+      </tr>`;
 }
 
-function crearLista(informacion){
-  let lista = '<ul>'
-  for(const key in informacion){
-      console.log(key); 
-      console.log(informacion[key]); 
-      lista += crearElemento(key, informacion[key]); 
+function crearTablaInformacion(informacion) {
+  let tabla = `
+      <table>
+          <thead>
+              <tr>
+                  <td>Proyectos más importantes</td>
+                  <td>Cliente</td>
+                  <td>Descripción</td>
+              </tr>
+          </thead>
+          <tbody>
+  `;
+
+  // Recorrer el listado de tareas para crear una fila por cada tarea
+  for(const info of informacion) {
+      tabla += crearInfo(info.pro, info.cliente, info.descripcion)
   }
-  lista += '</ul>'
-  return lista;
+  tabla += '</tbody></table>'
+  return tabla;
 }
 
-let listaHTML = crearLista(informacion);
-document.getElementById('contenedor-informacion').insertAdjacentHTML('afterbegin', listaHTML);
+let tabla = crearTablaInformacion(informacion)
+document.getElementById('contenedor-informacion').innerHTML = tabla
